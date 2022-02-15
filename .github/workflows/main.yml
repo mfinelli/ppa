@@ -1,0 +1,12 @@
+---
+name: Release
+on: push
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "{{ secrets.SIGNING_KEY }}" | gpg --import
+      - run: sudo apt install -y apt-file pbuilder ubuntu-dev-tools
