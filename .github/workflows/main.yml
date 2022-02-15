@@ -7,6 +7,9 @@ jobs:
     name: Release
     runs-on: ubuntu-20.04
     steps:
+      - run: echo "::set-output name=codename::$(grep UBUNTU_CODENAME /etc/os-release | awk -F= '{print $2}')"
+        id: ubuntu
       - uses: actions/checkout@v2
       - run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - run: sudo apt install -y apt-file pbuilder ubuntu-dev-tools
+      - run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
