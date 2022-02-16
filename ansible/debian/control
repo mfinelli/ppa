@@ -1,0 +1,84 @@
+Source: ansible
+Maintainer: Lee Garrett <debian@rocketjump.eu>
+Uploaders: Harlan Lieberman-Berg <hlieberman@debian.org>
+Section: admin
+Priority: optional
+Build-Depends: debhelper (>= 12~),
+               dh-python,
+               python3-all,
+#               python3-antsibull <!nodoc>,
+               python3-pycryptodome,
+               python3-docutils,
+               python3-jinja2,
+               python3-nose,
+               python3-packaging,
+               python3-passlib,
+#               python3-pygments <!nodoc>,
+#               python3-rstcheck <!nodoc>,
+               python3-setuptools,
+#               python3-straight.plugin <!nodoc>,
+#               python3-sphinx <!nodoc>,
+#               python3-sphinx-notfound-page <!nodoc>,
+#               python3-sphinx-rtd-theme <!nodoc>,
+               python3-straight.plugin,
+               python3-yaml,
+#               sphinx-common,
+Rules-Requires-Root: no
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/debian/ansible
+Vcs-Git: https://salsa.debian.org/debian/ansible.git -b bullseye
+Homepage: https://www.ansible.com
+
+Package: ansible
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends},
+         openssh-client | python3-paramiko (>= 2.6.0),
+         python3-pycryptodome,
+         python3-distutils,
+         python3-dnspython,
+         python3-httplib2,
+         python3-jinja2,
+         python3-netaddr,
+         python3-yaml
+Recommends: python3-argcomplete,
+            python3-cryptography,
+            python3-jmespath,
+            python3-kerberos,
+            python3-libcloud,
+            python3-selinux,
+            python3-winrm,
+            python3-xmltodict
+Suggests: cowsay,
+          sshpass
+Breaks: ansible-base (<= 2.10.5+dfsg-2)
+Replaces: ansible-base (<= 2.10.5+dfsg-2)
+Description: Configuration management, deployment, and task execution system
+ Ansible is a radically simple model-driven configuration management,
+ multi-node deployment, and remote task execution system. Ansible works
+ over SSH and does not require any software or daemons to be installed
+ on remote nodes. Extension modules can be written in any language and
+ are transferred to managed machines automatically.
+ .
+ This package contains ansible-base 2.10.x and ansible-collections 2.10.x merged
+ into one package.
+
+#Package: ansible-doc
+#Architecture: all
+#Section: doc
+#Depends: ${misc:Depends},
+#         ${sphinxdoc:Depends},
+#         fonts-font-awesome,
+#         fonts-roboto-fontface,
+#         libjs-jquery,
+#         libjs-modernizr,
+#         libjs-underscore
+#Description: Ansible documentation and examples
+# Ansible is a radically simple model-driven configuration management,
+# multi-node deployment, and remote task execution system. Ansible works
+# over SSH and does not require any software or daemons to be installed
+# on remote nodes. Extension modules can be written in any language and
+# are transferred to managed machines automatically.
+# .
+# This package contains HTML documentation and examples.
+#Build-Profiles: <!nodoc>

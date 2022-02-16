@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+#DEBHELPER#
+
+dpkg-maintscript-helper rm_conffile \
+  /etc/ansible/ansible.cfg 2.10.4~ ansible -- "$@"
+
+dpkg-maintscript-helper rm_conffile \
+  /etc/ansible/hosts 2.10.4~ ansible -- "$@"
+
+if [ -d /etc/ansible ]; then
+  rmdir --ignore-fail-on-non-empty /etc/ansible 2> /dev/null
+fi
+
+exit 0

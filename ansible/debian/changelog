@@ -1,0 +1,663 @@
+ansible (2.10.7+merged+base+2.10.8+dfsg-1) unstable; urgency=medium
+
+  * Upload to unstable
+  * Thanks to Christian Kastner for preparing this release.
+  * Temporarily merge ansible-base and ansible source packages.
+  * Remove 0006-remove-sphinx-notfound.patch (not needed)
+  * Fix python interpreter discovery (Closes: #983140)
+  * Fix "Mask default and fallback values for no_log module options"
+    (CVE-2021-20228)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Mon, 19 Apr 2021 23:56:56 +0200
+
+ansible (2.10.7-2) experimental; urgency=medium
+
+  * Enable autopkgtests.
+  * Fix SyntaxWarnings (Closes: #982682)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Thu, 25 Mar 2021 18:09:54 +0100
+
+ansible (2.10.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upload to unstable.
+  * Gracefully handle missing /etc/ansible on upgrade.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Wed, 10 Feb 2021 00:44:56 +0100
+
+ansible (2.10.4-1) experimental; urgency=medium
+
+  * New upstream release
+  * Depend on ansible-base
+  * Remove building of ansible-doc (now provided by ansible-base)
+  * Remove all d/patches/*, code is now shipped in ansible-base
+  * Stop shipping conffiles in /etc/ansible/*
+  * Remove deps to python-crypto, not needed (Closes: #971309)
+  * Remove d/ansible.links (Closes: #970422)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Thu, 07 Jan 2021 23:15:47 +0100
+
+ansible (2.9.16+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Lee Garrett <debian@rocketjump.eu>  Wed, 16 Dec 2020 20:27:46 +0100
+
+ansible (2.9.13+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #963482)
+  * Remove hidden files from binary package (Closes: #963165)
+  * Bump Standards-Version (no changes needed)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Fri, 11 Sep 2020 07:32:43 +0200
+
+ansible (2.9.9+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sat, 30 May 2020 22:11:57 +0200
+
+ansible (2.9.7+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fix debian/copyright (Closes: #958907)
+  * Tighten dependency on python3-paramiko to ease backports
+  * Fix win_unzip path escape (CVE-2020-1737)
+  * Fix temp dir race condition (CVE-2020-1733)
+  * Fix password on commandline in subversion module (CVE-2020-1739)
+  * Fix ansible vault symlink vulnerability (CVE-2020-1740)
+  * Fix ansible galaxy path escape (CVE-2020-10691)
+
+
+ -- Lee Garrett <debian@rocketjump.eu>  Thu, 07 May 2020 18:49:05 +0200
+
+ansible (2.9.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Lee Garrett <debian@rocketjump.eu>  Mon, 16 Mar 2020 16:52:07 +0100
+
+ansible (2.9.4+dfsg-1) unstable; urgency=medium
+
+  * The "Greetings from Banja Luka" release
+  * New upstream release
+  * Added python3-distutils to Depends (Thanks to Matthias Luescher!)
+  * Fix vulnerability in solaris_zone module via crafted solaris zone
+    (CVE-2019-14904)
+  * Fix "malicious code could craft filename in nxos_file_copy module"
+    (CVE-2019-14905)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Mon, 10 Feb 2020 15:49:29 +0100
+
+ansible (2.9.2+dfsg-1) unstable; urgency=medium
+
+  * The "Greetings from the 36c3" release.
+  * New upstream release (Closes: #946245)
+  * Fix Splunk and Sumologic callback plugin logging sensitive data
+    (CVE-2019-14864) (Closes: #943768)
+  * Fix parameters marked with "no_log" in suboptions when invalid
+    parameters are passed to the module (CVE-2019-14858) (Closes: #943768)
+  * Fix for CVE-2019-14856
+  * Fix for CVE-2019-10156
+  * Fix for CVE-2019-10206
+  * Add python3-dnspython to Depends (Closes: #941020)
+  * add python3-argcomplete to Recommends, allowing bash completion
+  * Stop shipping ansible-test.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Mon, 30 Dec 2019 21:31:13 +0100
+
+ansible (2.8.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Fix for CVE-2019-14846, CVE-2019-14856, CVE-2019-14858 (v2.8.6)
+  * Fix for CVE-2019-10217, CVE-2019-10206 (fixed in v2.8.4)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Mon, 28 Oct 2019 22:13:01 +0100
+
+ansible (2.8.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #932288)
+  * This release fixes CVE-2019-10156 (Closes: #930065)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Thu, 01 Aug 2019 10:39:19 -0300
+
+ansible (2.7.8+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove patch for CVE-2019-3828 (applied upstream)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sat, 02 Mar 2019 20:33:08 +0100
+
+ansible (2.7.7+dfsg-1) unstable; urgency=high
+
+  * New upstream release
+  * Remove Michael Vogt from uploaders. Thanks for your past contributions!
+  * Fix path traversal bug in fetch module (CVE-2019-3828)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Thu, 21 Feb 2019 08:44:57 +0100
+
+ansible (2.7.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Support 'nodoc' build profile
+  * Add sphinxdoc dependencies (Closes: #919830)
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sat, 26 Jan 2019 15:16:27 +0100
+
+ansible (2.7.5+dfsg-2) experimental; urgency=medium
+
+  * Switch to python3. (Closes: #850669)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Mon, 31 Dec 2018 01:02:08 +0100
+
+ansible (2.7.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+    - fix for CVE-2018-16876 (Closes: #916102)
+  * Remove any loading of external resources from the docs
+  * Only symlink JS that dh_sphinxdoc doesn't take care of
+  * Override lintian for a long line in layout.html
+  * Build ansible-doc again (Closes: #848871)
+  * Add build-depends to python-jinja2 (Closes: #915316)
+  * Bump Standards-Version (no changes needed)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Wed, 19 Dec 2018 11:35:55 +0100
+
+ansible (2.7.1+dfsg-2) unstable; urgency=medium
+
+  * Add build-depends to python-packaging (Closes: #912995)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Tue, 13 Nov 2018 11:03:34 +0100
+
+ansible (2.7.1+dfsg-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+
+  [ Lee Garrett ]
+  * New upstream release
+  * Move from asciidoc to docutils (Closes: #894188)
+  * Document packaging build process (Closes: #911027)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sun, 28 Oct 2018 14:06:43 +0100
+
+ansible (2.6.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Greetings from the Chemnitz BSP!
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sat, 29 Sep 2018 15:24:01 +0200
+
+ansible (2.6.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sun, 09 Sep 2018 20:07:55 +0200
+
+ansible (2.6.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Mon, 20 Aug 2018 15:53:28 +0200
+
+ansible (2.6.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Avoid loading host/group vars from cwd when not specifying a playbook or
+    playbook base dir (CVE-2018-10874)
+  * Avoid using ansible.cfg in a world writable dir (CVE-2018-10875)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Wed, 11 Jul 2018 23:25:18 +0200
+
+ansible (2.5.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Fri, 15 Jun 2018 17:01:00 +0200
+
+ansible (2.5.3+dfsg-2) unstable; urgency=medium
+
+  * Merge the alioth and salsa repos
+  * Fix again README.rst that was accidentally reverted in the previous upload
+    (Closes: #898433)
+  * Update VCS fields in debian/control to point to salsa.debian.org.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sat, 19 May 2018 19:37:54 +0200
+
+ansible (2.5.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Fri, 18 May 2018 13:50:03 +0200
+
+ansible (2.5.2+dfsg-2) unstable; urgency=medium
+
+  * Correct d/docs to point to README.rst.  (Closes: #898433)
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Sat, 12 May 2018 14:46:38 -0400
+
+ansible (2.5.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sat, 28 Apr 2018 17:39:10 +0200
+
+ansible (2.5.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Thu, 19 Apr 2018 11:22:34 +0200
+
+ansible (2.5.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sun, 25 Mar 2018 14:39:53 +0200
+
+ansible (2.4.3.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Thu, 01 Feb 2018 13:45:09 +0100
+
+ansible (2.4.2.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.1.1 (no changes needed)
+  * Add new manpages for ansible-config and ansible-inventory, added in 2.4.0.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Wed, 06 Dec 2017 20:48:46 +0100
+
+ansible (2.4.0.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove 0002-fix-jinja-1.9-upgrade.patch, applied upstream.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Wed, 20 Sep 2017 00:52:02 +0200
+
+ansible (2.3.2.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Remove 01-fix-htpasswd.patch, applied upstream.
+  * Upstream fixes:
+    - Fix --force for unversioned requirements (Closes: #874194)
+    - attempt to fix systemd in chroot env (Closes: 873890)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sun, 10 Sep 2017 21:20:43 -0400
+
+ansible (2.3.1.0+dfsg-2) unstable; urgency=high
+
+  * Import patch fixing jinja2 issues (Closes: #870599, #871601)
+  * Revert python-jinja2 pin.
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Sun, 27 Aug 2017 19:57:43 -0400
+
+ansible (2.3.1.0+dfsg-1) unstable; urgency=high
+
+  [ Lee Garrett ]
+  * The "Harlan is late for DebCamp" release.
+  * New upstream release (Closes: #845613, 851619, #868553)
+    - fixed CVE-2017-7481 (Closes: #862666)
+  * Add python-libcloud to recommends (Closes: #869751)
+  * Add python-jmespath to recommends (Closes: #859999)
+  * Bump Standards-Version to 4.0.0 (no changes needed)
+  * Add python-cryptography to recommends to speed up vault operations.
+  * Drop 0001-add-console-manpage.patch and 0002-fix-cve-2017-7466.patch,
+    both applied upstream.
+
+  [ Harlan Lieberman-Berg ]
+  * Pin python-jinja2 against incompatible new releases.
+  * Import patch fixing htpasswd module. (Closes: #863949)
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Mon, 07 Aug 2017 17:26:53 -0400
+
+ansible (2.2.1.0-2) unstable; urgency=medium
+
+  * Add patch to fix CVE-2017-7466.
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Wed, 12 Apr 2017 00:56:30 -0400
+
+ansible (2.2.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove following patches, applied upstream:
+    - fix_CVE-2016-8647.patch
+    - fix_pip_venv.patch
+    - fix_UnboundedLocalError.patch
+    - fix-cve-2016-9587.patch
+  * Add myself to uploaders.
+
+ -- Lee Garrett <debian@rocketjump.eu>  Sat, 21 Jan 2017 21:27:15 +0100
+
+ansible (2.2.0.0-4) unstable; urgency=high
+
+  * Commit to git the changelog line I actually used.
+  * Cherry-pick patch fixing git module error. (Closes: #850935)
+  * Cherry-pick patch fixing python3 + virtualenv problems. (Closes: #847546)
+  * Cherry-pick patch fixing CVE-2016-8647 (Closes: #844691)
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Sat, 14 Jan 2017 15:30:48 -0500
+
+ansible (2.2.0.0-3) unstable; urgency=high
+
+  * Apply additional fixes for CVE-2016-9587 (Closes: #850846)
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Fri, 13 Jan 2017 21:17:56 -0500
+
+ansible (2.2.0.0-2) unstable; urgency=high
+
+  * Cherry-pick patch to fix CVE-2016-9587 (Closes: #850846)
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Tue, 10 Jan 2017 20:14:07 -0500
+
+ansible (2.2.0.0-1) unstable; urgency=medium
+
+  * New upstream release: (Closes: #843763)
+    - CVE-2016-8628 (Closes: #842985)
+    - CVE-2016-8614 (Closes: #842984)
+  * Add python-kerberos, python-winrm, python-xmltodict to Recommends, needed
+    to manage Windows hosts. (Closes: #843995)
+  * Suggest cowsay (Closes: #834056)
+
+ -- Lee Garrett <debian@rocketjump.eu>  Fri, 25 Nov 2016 20:52:24 +0100
+
+ansible (2.1.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update cme copyright helper files.
+  * Drop ansible-*fireball, as it is no longer supported.
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Sun, 31 Jul 2016 22:02:59 -0400
+
+ansible (2.1.0.0-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #826927, #814371)
+  * Update d/copyright; add cme hinting files.
+  * Bump S-V; no changes required
+  * Add manpage for ansible-console.
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Sun, 12 Jun 2016 21:12:05 -0400
+
+ansible (2.0.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Remove patches applied upstream
+  * Change maintainer from Janos to me
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Tue, 19 Apr 2016 22:31:25 -0400
+
+ansible (2.0.1.0-2) unstable; urgency=medium
+
+  * Backport patches to fix vulns in lxc plugin (Closes: #819676)
+  * Update my email address
+
+ -- Harlan Lieberman-Berg <hlieberman@debian.org>  Sun, 10 Apr 2016 18:37:37 -0400
+
+ansible (2.0.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix Vcs-git URI.
+  * Bump standards version.
+
+ -- Harlan Lieberman-Berg <hlieberman@setec.io>  Thu, 25 Feb 2016 23:03:33 -0500
+
+ansible (2.0.0.2-2) unstable; urgency=medium
+
+  * Migrate to unstable.
+  * Switch Vcs-git to https.
+
+ -- Harlan Lieberman-Berg <hlieberman@setec.io>  Mon, 08 Feb 2016 07:15:41 -0500
+
+ansible (2.0.0.2-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Harlan Lieberman-Berg <hlieberman@setec.io>  Fri, 15 Jan 2016 20:15:26 -0500
+
+ansible (2.0.0.1-1) experimental; urgency=medium
+
+  * New upstream version.
+  * Fix up d/control's spacing, ordering.
+  * Extensive update of d/copyright with cme.
+
+ -- Harlan Lieberman-Berg <hlieberman@setec.io>  Tue, 12 Jan 2016 22:56:34 -0500
+
+ansible (1.9.4-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Harlan Lieberman-Berg <hlieberman@setec.io>  Sat, 10 Oct 2015 17:51:09 -0400
+
+ansible (1.9.3-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Harlan Lieberman-Berg <hlieberman@setec.io>  Thu, 03 Sep 2015 21:06:03 -0400
+
+ansible (1.9.2+dfsg-2) unstable; urgency=low
+
+  * Fix suggestion of no-longer-built ansible-doc. (Closes: #795532)
+    .
+    Ansible used to ship their website which contained the manual for using ansible
+    and learning it.  They no longer ship this in released versions, thus ansible-doc
+    was removed.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Sat, 15 Aug 2015 09:29:31 +0200
+
+ansible (1.9.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream version. (Closes: #773526)
+  * Add dependency on python-netaddr (Closes: #790234)
+  * Heavy refactoring due to upstream release changes
+  * New, comprehensive d/copyright.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Sat, 27 Jun 2015 23:12:55 -0400
+
+ansible (1.7.2+dfsg-2) unstable; urgency=low
+
+  * Add updated paths to d/copyright.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Thu, 02 Oct 2014 17:31:12 -0400
+
+ansible (1.7.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Wed, 24 Sep 2014 16:55:14 -0400
+
+ansible (1.7.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Thu, 14 Aug 2014 20:13:22 -0400
+
+ansible (1.7.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh and remove outdated patches.
+  * Add python-selinux to Recommends for SELinux support. (Closes: #757358)
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Wed, 06 Aug 2014 21:15:22 -0400
+
+ansible (1.6.10+dfsg-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Fri, 25 Jul 2014 20:00:08 -0400
+
+ansible (1.6.9+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Fri, 25 Jul 2014 00:06:50 -0400
+
+ansible (1.6.8+dfsg-1) unstable; urgency=medium
+
+  * New upstream release, fixing:
+    CVE-2014-4966, CVE-2014-4967.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Wed, 23 Jul 2014 01:12:09 -0400
+
+ansible (1.6.6+dfsg-1) unstable; urgency=high
+
+  * New upstream release.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Wed, 02 Jul 2014 01:35:05 +0000
+
+ansible (1.6.5+dfsg-1) unstable; urgency=high
+
+  * New upstream release, x2.
+  * Switch to using Files-Excluded to repack upstream for DFSG.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Wed, 25 Jun 2014 22:03:26 +0000
+
+ansible (1.6.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 10 Jun 2014 00:23:17 +0000
+
+ansible (1.6.2+dfsg-1) unstable; urgency=medium
+
+  [ Felix Geyer ]
+  * Run upstream build tests during the build. (Closes: #749406)
+
+  [ Harlan Lieberman-Berg ]
+  * New upstream version.
+  * Packaged version from tip of upstream branch release1.6.2 instead of
+    tagged version, as it contains a fix needed to prevent FTBFS.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Sun, 25 May 2014 17:50:03 +0000
+
+ansible (1.6.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Wed, 07 May 2014 18:49:07 +0000
+
+ansible (1.6.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Remove patches applied upstream.
+  * Fix manpage warning.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 06 May 2014 03:07:30 +0000
+
+ansible (1.5.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.5.5, security update.
+  * d/control: Add myself to Uploaders to silence Lintian
+  * Refresh patches for new version.  Add DEP-3 headers to one patch.
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Mon, 21 Apr 2014 16:51:47 -0400
+
+ansible (1.5.4+dfsg-1) unstable; urgency=medium
+
+  * Pull missing manpages from upstream development branch.
+  * New upstream version 1.5.4, security update.
+  * Add patch to correct directory_mode functionality. (Closes: #743027)
+
+ -- Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>  Tue, 01 Apr 2014 22:00:24 -0400
+
+ansible (1.5.3+dfsg-1) unstable; urgency=low
+
+  [ Harlan Lieberman-Berg ]
+  * New upstream version.
+  * Update Ansible homepage URL.
+  * Add FontAwesome to d/copyright, remove non-existant files.
+  * Refresh all patches, removing some related to documentation.
+  * Add new dependency on python-crypto.
+
+  [ Michael Vogt ]
+  * add "sshpass" to Suggests
+  * add "openssh-client | python-paramiko" to depends
+
+ -- Michael Vogt <mvo@debian.org>  Tue, 18 Mar 2014 14:33:23 +0100
+
+ansible (1.4.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Michael Vogt <mvo@debian.org>  Thu, 20 Feb 2014 08:58:14 +0100
+
+ansible (1.4.4+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Michael Vogt <mvo@debian.org>  Tue, 07 Jan 2014 19:58:44 +0100
+
+ansible (1.4.3+dfsg-2) unstable; urgency=low
+
+  * add "Suggests: ansible-doc" to the dependency, thanks to
+    Ben Finney (closes: #729350)
+  * Fix Vcs-Browser, thanks to Alessandro Ghedini
+    (closes: #731482)
+
+ -- Michael Vogt <mvo@debian.org>  Tue, 07 Jan 2014 10:58:44 +0100
+
+ansible (1.4.3+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Michael Vogt <mvo@debian.org>  Fri, 27 Dec 2013 09:48:35 +0100
+
+ansible (1.4.1+dfsg-1) unstable; urgency=low
+
+  * New upstream version
+  * add asciidoc build-depends
+
+ -- Michael Vogt <mvo@debian.org>  Tue, 03 Dec 2013 08:17:05 +0100
+
+ansible (1.4.0+dfsg-1) unstable; urgency=low
+
+  * new upstream version
+  * debian/rules:
+    - remove sed manpage fixes, fixed upstream
+  * debian/patches/fix-html-makefile:
+    - removed, fixed upstream
+
+ -- Michael Vogt <mvo@debian.org>  Sun, 24 Nov 2013 10:41:27 +0100
+
+ansible (1.3.4+dfsg-1) unstable; urgency=low
+
+  [ Harlan Lieberman-Berg ]
+  * New upstream release (Closes: #717777).
+    Fixes CVE-2013-2233 (Closes: #714822).
+    Fixes CVE-2013-4259 (Closes: #721766).
+  * Drop fix-ansible-cfg patch.
+  * Change docsite generation to not expect docs as part of a wordpress install.
+  * Add trivial patch to fix lintian error with rpm-key script.
+  * Add patch header information to fix-html-makefile.
+
+  [ Michael Vogt ]
+  * add myself to uploader
+  * build/ship the module manpages for ansible in the ansible package
+
+ -- Michael Vogt <mvo@debian.org>  Fri, 01 Nov 2013 09:40:59 +0100
+
+ansible (1.2.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Drop remove-external-training-references.patch
+
+ -- Michael Vogt <mvo@debian.org>  Sat, 13 Jul 2013 21:40:49 +0200
+
+ansible (1.1+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update patches disable-google-analytics.patch and
+    remove-external-image.patch to apply cleanly.
+  * Add remove-external-footer-image.patch to remove link on external resource.
+  * Add remove-external-training-references.patch:
+    Training advertise contains links to external resources that may not be
+    available or may be used for tracking users activity without their
+    knowledge by the third-party.
+
+ -- Janos Guljas <janos@debian.org>  Sat, 06 Apr 2013 23:27:08 +0200
+
+ansible (0.9+dfsg-1) unstable; urgency=low
+
+  * Initial release. (Closes: #698428)
+
+ -- Janos Guljas <janos@debian.org>  Wed, 23 Jan 2013 01:52:40 +0100

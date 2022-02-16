@@ -1,0 +1,829 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ansible
+Upstream-Contact: Michael DeHaan <michael.dehaan@gmail.com>
+Source: https://github.com/ansible/ansible/
+Files-Excluded:
+    docs/docsite/_themes
+
+Files: *
+Copyright: 2017, <meiliu@fusionlayer.com>
+           2017, AMTEGA - Xunta de Galicia
+           2013, Aaron Bull Schaefer <aaron@elasticdog.com>
+           2019, Aaron Longchamps <a.j.longchamps@gmail.com>
+           2018, Aaron Smith <ajsmith10381@gmail.com>
+           2016, Abdoul Bah (@helldorado) <bahabdoul@gmail.com>
+           2017-2019, Abhijeet Kasurde <akasurde@redhat.com>
+           2015, Abhijit Menon-Sen <ams@2ndQuadrant.com>
+           2019, Adam Goossens <adam.goossens@gmail.com>
+           2015, Adam Keech <akeech@chathamfinancial.com>
+           2017-2018, Adam Miller <admiller@redhat.com>
+           2013, Adam Miller <maxamillion@fedoraproject.org>
+           2015-2016, Adam Števko <adam.stevko@gmail.com>
+           2016, Adfinis SyGroup AG
+           2016-2018, Adrian Likins <alikins@redhat.com>
+           2018, Adrien Fleury <fleu42@gmail.com>
+           2012, Afterburn <https://github.com/afterburn>
+           2014, Ahti Kitsik <ak@ahtik.com>
+           2016, Alain Dejoux <adejoux@djouxtech.net>
+           2018, Alan Rominger <arominge@redhat.com>
+           2019, Alan Rominger <arominge@redhat.net>
+           2018, Albert Autin
+           2017, Alberto Murillo <alberto.murillo.silva@intel.com>
+           2017, Alejandro Gomez <alexgomez2202@gmail.com>
+           2015, Alejandro Guirao <lekumberri@gmail.com>
+           2016, Aleksei Kostiuk <unitoff@gmail.com>
+           2013, Aleksey Ovcharenko <aleksey.ovcharenko@gmail.com>
+           2017, Alen Komic
+           2015, Ales Nosek <anosek.nosek () gmail.com>
+           2018, Alexander Bethke (@oolongbrothers) <oolongbrothers@gmx.net>
+           2013, Alexander Bulimov <lazywolf0@gmail.com>
+           2013, Alexander Saltanov <asd@mokote.com>
+           2013, Alexander Winkler <mail () winkler-alexander.de>
+           2017, Alibaba Group Holding Limited. He Guimin <heguimin36@163.com>
+           2015, Allen Sanabria <asanabria@linuxdynasty.org>
+           2017, Allyson Bowles <@akatch>
+           2014, Anders Ingemann <aim@secoya.dk>
+           2016, Andew Clarke <andrew@oscailte.org>
+           2016, Andreas Olsson <andreas@arrakis.se>
+           2013, Andrew Dunham <andrew@du.nham.ca>
+           2016, Andrew Gaffney <andrew@agaffney.org>
+           2018-2019, Andrew Klychkov (@Andersson007) <aaklychkov@mail.ru>
+           2017, Andrew Saraceni <andrew.saraceni@gmail.com>
+           2016, Andrew Zenk <azenk@umn.edu>
+           2013, André Paramés <git@andreparames.com>
+           2012-2019, Ansible Project
+           2018, Anthony Bond <ajbond2005@gmail.com>
+           2018, Antoine Barbare <antoinebarbare@gmail.com>
+           2018, Antoine Catton
+           2018, Antoine Levy-Lambert (@antoinell)
+           2017-2018, Antony Alekseyev <antony.alekseyev@gmail.com>
+           2017, Apstra Inc <community@apstra.com>
+           2017, Arie Bregman <abregman@redhat.com>
+           2018, Arigato Machine Inc
+           2018, Armin Ranjbar Daemi <armin@webair.com>
+           2016, Artem Feofanov <artem.feofanov@gmail.com>
+           2017, Artem Zinenko <zinenkoartem@gmail.com>
+           2002-2016, Aruba Networks, Inc
+           2013, Balazs Pocze <banyek@gawker.com>
+           2015, Bede Carroll <bc+github () bedecarroll.com>
+           2016, Ben Doherty <bendohmv@gmail.com>
+           2017, Ben Tomasik <ben@tomasik.io>
+           2015, Benjamin Copeland (@bhcopeland) <ben@copeland.me.uk>
+           2014, Benjamin Curtis <benjamin.curtis@gmail.com>
+           2016-2017, Benjamin Jolivot <bjolivot@gmail.com>
+           2013, Benno Joy <benno@ansible.com>
+           2016, Bill Wang <ozbillwang@gmail.com>
+           2015, Billy Kimble <basslines@gmail.com>
+           2018-2019, Bojan Vitnik <bvitnik@mainstream.rs>
+           2012, Boyd Adamson <boyd () boydadamson.com>
+           2012, Brad Olson <brado@movedbylight.com>
+           2017, Branko Majic <branko@majic.rs>
+           2015-2017, Brian Coca <bcoca@ansible.com>
+           2017, Brian Coca <bcoca@redhat.com>
+           2014, Brian Coca <brian.coca+dev@gmail.com>
+           2014, Brian Coca <briancoca+ansible@gmail.com>
+           2015, Brian Coca <briancoca+dev@gmail.com>
+           2014, Brian Coca, Josh Drake
+           2008, Brian Nez <thedude@bri1.com>
+           1995-2018, Brocade Communications Systems, Inc
+           2013, Bruce Pennypacker <bruce@pennypacker.org>
+           2018, Bruce Smith <Bruce.Smith.IT@gmail.com>
+           2017, Bruno Calogero <bcalogero@cisco.com>
+           2017, Bruno Calogero <brunocalogero@hotmail.com>
+           2019, Bruno Inec (@sweenu) <bruno@inec.fr>
+           2016-2017, Bruno Medina Bolanos Cacho <bruno.medina@microsoft.com>
+           2006-2007, CDRKIT TEAM
+           2015, CallFire Inc
+           2019, Carson Anderson <rcanderson23@gmail.com>
+           2018, Catalyst Cloud Ltd
+           2016, Catalyst IT Limited
+           2018, Catalyst IT Ltd
+           2015, CenturyLink
+           2016, Charles Paul <cpaul@ansible.com>
+           2013, Chatham Financial <oss@chathamfinancial.com>
+           2014-2015, Chris Church <cchurch@ansible.com>
+           2014, Chris Church <chris@ninemoreminutes.com>
+           2014, Chris Hoffman <choffman@chathamfinancial.com>
+           2017, Chris Hoffman <christopher.hoffman@gmail.com>
+           2018, Chris Houseknecht <@chouseknecht>
+           2016, Chris Houseknecht <house@redhat.com>
+           2015, Chris Long <alcamie@gmail.com>
+           2012-2014, Chris Meyers <chris.meyers.fsu@gmail.com>
+           2017, Chris Meyers <cmeyers@ansible.com>
+           2014, Chris Schmidt <chris.schmidt () contrastsecurity.com>
+           2013-2014, Christian Berendt <berendt@b1-systems.de>
+           2018, Christian Kotte <christian.kotte@gmx.de>
+           2018, Christophe FERREIRA <christophe.ferreira@cnaf.fr>
+           2017, Cisco Systems Inc
+           1986-2018, Cisco Systems, Inc
+           2017-2019, Cisco and/or its affiliates
+           2017, Citrix Systems
+           2015, Corwin Brown <blakfeld@gmail.com>
+           2015, Corwin Brown <corwin.brown@maxpoint.com>
+           2015, Corwin Brown <corwin@corwinbrown.com>
+           2013, Cove Schneider
+           2015, Cristian van Ee <cristian@cvee.org>
+           2018, CrySyS Lab <www.crysys.hu>
+           2016-2018, Cumulus Networks <ce-ceng@cumulusnetworks.com>
+           2012-2019, Dag Wieers (@dagwieers) <dag@wieers.com>
+           2014, Dan Keder <dan.keder@gmail.com>
+           2012, Dane Summers <dsummers@pinedesk.biz>
+           2012, Daniel Hokka Zakrisson <daniel@hozac.com>
+           2013, Daniel Jaouen <dcj24@cornell.edu>
+           2017-2018, Evert Mulder (base on manageiq_user.py by Daniel Korn <korndaniel1@gmail.com>
+           2015-2016, Daniel Lobato <elobatocs@gmail.com>
+           2016, Daniel Lobato Garcia <dlobatog@redhat.com>
+           2016, Daniel Miranda <danielkza2@gmail.com>
+           2016-2017, Daniele Lazzari <lazzari@mailup.com>
+           2017-2018, Dario Zanzico <git@dariozanzico.com>
+           2015, Darren Worrall <darren@iweb.co.uk>
+           2013, Darryl Stoflet <stoflet@gmail.com>
+           2012, David "DaviXX" CHANIAL <david.chanial@gmail.com>
+           2018, David Gomez (@amb1s1) <david.gomez@networktocode.com>
+           2017-2018, David Gunter <david.gunter@tivix.com>
+           2018, David Kainz <dkainz@mgit.at>
+           2017-2018, David Passante (@dpassante)
+           2017-2019, David Soper (@dsoper2)
+           2013, David Stygstra <david.stygstra@gmail.com>
+           2015, David Wittman <dwittman@gmail.com>
+           2017, Davis Phillips <davis.phillips@gmail.com>
+           2016, Deepak Kothandan <deepak.kothandan@outlook.com>
+           2017, Dell EMC
+           1999-2019, Dell Inc
+           2018, Dennis Conrad for Sainsbury's
+           2012, Derek Carter <goozbach@friocorte.com>
+           2018, Derek Rushing <derek.rushing@geekops.com>
+           2018, Deric Crago <deric.crago@gmail.com>
+           2018, Diane Wang <dianew@vmware.com>
+           2016, Dimension Data
+           2014, Dimitrios Tydeas Mengidis <tydeas.dr@gmail.com>
+           2016, Dino Occhialini <dino.occhialini@gmail.com>
+           2016, Doalitic
+           2013, Drew Kerrigan <dkerrigan@basho.com>
+           2013, Dylan Martin <dmartin@seattlecentral.edu>
+           1993, E.YOUNGDALE
+           2017, Edward Nunez <edward.nunez@cyberark.com>
+           2017, Eike Frost <ei@kefro.st>
+           2012, Elliott Foster <elliott@fourkitchens.com>
+           2018, Emmanouil Kampitakis <info@kampitakis.de>
+           2013-2015, Epic Games, Inc
+           2016, Eric Chou <ericc@a10networks.com>
+           2016, Eric D Helms <ericdhelms@gmail.com>
+           2017, Erwan Quelin (@equelin) <erwan.quelin@gmail.com>
+           2013-2015, Evan Kaufman <evan@digitalflophouse.com>
+           2013, Evan Wies <evan@neomantra.net>
+           2018, Evert Mulder <evertmulder@gmail.com>
+           2013, Evgenii Terechkov
+           2019, Evgeniy Krysanov <evgeniy.krysanov@gmail.com>
+           2019, Extreme Networks
+           2018, Extreme Networks Inc
+           2016-2019, F5 Networks Inc
+           2016, Fabrizio Colonna <colofabrix@tin.it>
+           2016, Fastly, inc
+           2018, Fedor Vompe <f.vompe () comptek.ru>
+           2018, Fedor Vompe <f.vompe@comptek.ru>
+           2017, Felix Archambault
+           2018, Felix Fontein (@felixfontein)
+           2018, Felix Fontein <felix@fontein.de>
+           2017, Flavien Chantelot (@Dorn-)
+           2016, Flavio Percoco <flavio@redhat.com>
+           2015, Florian Apolloner <florian@apolloner.eu>
+           2015-2016, Florian Haas, hastexo Professional Services GmbH
+           2012, Flowroute LLC
+           2018, Fortinet and/or its affiliates
+           2018-2019, Fortinet, Inc
+           2017-2018, Fran Fitzpatrick <francis.x.fitzpatrick@gmail.com>
+           2012, Franck Cuny <franck@lumberjaph.net>
+           2017, Frederic Van Espen <github@freh.be>
+           2007, Free Software Foundation, Inc. <http://fsf.org/>
+           2014, Gabe Mulley <gabe.mulley@gmail.com>
+           2017-2018, Gaudenz Steinlin <gaudenz.steinlin@cloudscale.ch>
+           2017, Gaurav Rastogi <grastogi@avinetworks.com>
+           2014, GeekChimp - Franck Nijhof <franck@geekchimp.com>
+           2018, Genome Research Ltd
+           2015, George Frank <george@georgefrank.net>
+           2017, Giovanni Sciortino (@giovannisciortino)
+           2013-2018, Google Inc
+           2018, Gregor Riepl <onitake@gmail.com>
+           2016, Gregory Shulov <gregory.shulov@gmail.com>
+           2015-2016, Guido Günther <agx@sigxcpu.org>
+           2017, Guillaume Delpierre <gde@llew.me>
+           2016, Guillaume Grossetie <ggrossetie@yuzutech.fr>
+           2019, Guillaume Martinez <lunik@tiwabbit.fr>
+           2018, Gustavo Muniz do Carmo <gustavo@esign.com.br>
+           2018-2019, Hai Cao <t-haicao@microsoft.com>
+           2019, Hannes Ljungberg <hannes.ljungberg@gmail.com>
+           2015, Hans-Joachim Kliemeck <git@kliemeck.de>
+           2015-2017, Henrik Wallström <henrik@wallstroms.nu>
+           2018, Henryk Konsek Consulting <hekonsek@gmail.com>
+           2019, Hetzner Cloud GmbH <info@hetzner-cloud.de>
+           2014-2018, Hewlett Packard Enterprise Development Company LP
+           2015, Heyo
+           2013-2016, Hiroaki Nakamura <hnakamur@gmail.com>
+           2018, Hiroyuki Matsuo <h.matsuo.engineer@gmail.com>
+           2019, Hitachi ID Systems, Inc
+           2018-2019, Huawei Inc
+           2016, Hugh Ma <hugh.ma@flextronics.com>
+           2013, Héctor Acosta <hector.acosta@gazzang.com>
+           2015-2018, IBM Corporation
+           2018, ITIGO AG <opensource@itigo.ch>
+           2016, Ievgen Khmelenko <ujenmr@gmail.com>
+           2015, Igor Gnatenko <i.gnatenko.brain@gmail.com>
+           2015-2016, Indrajit Raychaudhuri <irc+code@indrajit.com>
+           2018, Ingate Systems AB
+           2018, Itential <opensource@itential.com>
+           2018, Ivan Aragones Muniesa <ivan.aragones.muniesa@gmail.com>
+           2013, Ivan Vanderbyl <ivan@app.io>
+           1997-2006, J.PEARSON/J.SCHILLING
+           2018, JR Kerkstra <jrkerkstra@example.org>
+           2017, Jacob McGill (@jmcgill298)
+           2017, Jacob McGill (jmcgill298)
+           2014-2015, Jakub Jirutka <jakub@jirutka.cz>
+           2016, Jakub Jursa <jakub.jursa1@gmail.com>
+           2013-2014, James Cammarata <jcammarata@ansible.com>
+           2016, James Cammarata <jimi@sngx.net>
+           2018, James E. King III (@jeking3) <jking@apache.org>
+           2016, James Hogarth <james.hogarth@gmail.com>
+           2014, James Laska <jlaska@ansible.com>
+           2013, James Martin <jmartin@basho.com>
+           2017, James Mighion <@jmighion>
+           2014-2017, James Tanner <tanner.jc@gmail.com>
+           2016, James Turner <turnerjsm@gmail.com>
+           2018, Jan Christian Grünhage <jan.christian@gruenhage.xyz>
+           2012-2014, Jan-Piet Mens <jpmens@gmail.com>
+           2014, Jarno Keskikangas <jarno.keskikangas@gmail.com>
+           2018, Jason Vanderhoof <jason.vanderhoof@cyberark.com>
+           2016-2017, Jasper Lievisse Adriaanse <j@jasper.la>
+           2018, Jasper Mackenzie <jasper.mackenzie@gmail.com>
+           2014, Jasper N. Brouwer <jasper@nerdsweide.nl>
+           2012, Jayson Vantuyl <jayson@aggressive.ly>
+           2017-2018, Jean-Philippe Evrard <jean-philippe@evrard.me>
+           2015, Jefferson Girão <jefferson@girao.net>
+           2014, Jens Carl, Hothead Games Inc
+           2014, Jens Depuydt <http://www.jensd.be>
+           2012-2013, Jeroen Hoekx <jeroen@hoekx.be>
+           2013, Jesse Keating <jesse.keating@rackspace.com>
+           2015, Jesse Keating <jlk@derpops.bike>
+           2016, Jiangge Zhang <tonyseek@gmail.com>
+           2012, Jim Richardson <weaselkeeper@gmail.com>
+           2013, Jimmy Tang <jcftang@gmail.com>
+           2015-2016, Jiri Tyr <jiri.tyr@gmail.com>
+           2016, Joe Adams <@sysadmind>
+           2015, Joerg Thalheim <joerg@higgsboson.tk>
+           2013, Johan Wiren <johan.wiren.se@gmail.com>
+           2018, Johannes Brunswicker <johannes.brunswicker@gmail.com>
+           2018, John Barker <gundalow@redhat.com>
+           2016, John Barker <jobarker@redhat.com>
+           2013, John Dewey <john@dewey.ws>
+           2018, John Imison <john+github@imison.net>
+           2017, John Kwiatkoski (@JayKayy) <jkwiat40@gmail.com>
+           2018, John McDonough (@movinalot)
+           2017, John Westcott IV <john.westcott.iv@redhat.com>
+           2015-2017, Jon Hawkesworth (@jhawkesworth) <figs@unity.demon.co.uk>
+           2017, Jon Meran <jonathan.meran@sonos.com>
+           2015, Jonathan Lestrelin <jonathan.lestrelin@gmail.com>
+           2015-2016, Jonathan Mainguy <jon@soh.re>
+           2017-2018, Jordan Borean <jborean93@gmail.com>
+           2018-2019, Jordan Borean <jborean@redhat.com>
+           2016, Jorge Rodriguez <jorge.rodriguez@tiriel.eu>
+           2017, Joris Weijters <joris.weijters@gmail.com>
+           2018, Jose Angel Munoz <josea.munoz () gmail.com>
+           2018, Jose Angel Munoz <josea.munoz@gmail.com>
+           2015, Jose Armesto <jose@armesto.net>
+           2017, Joseph Benden <joe@benden.us>
+           2015, Joseph Callen <jcallen () csc.com>
+           2016, Josh Bradley <jbradley@digitalocean.com>
+           2015, Josh Ludwig <jludwig@chathamfinancial.com>
+           2014, Joshua Conner <joshua.conner@gmail.com>
+           2017-2018, Juan Manuel Parrilla <jparrill@redhat.com>
+           2017, Juergen Kirschbaum <jk@jk-itc.de>
+           2018, Juergen Wiebe <wiebe@e-spirit.com>
+           2016, Julian Barnett <jbarnett@tableau.com>
+           2016-2017, Julien Stroheker <juliens@microsoft.com>
+           2014, Justin Lecher <jlec@gentoo.org>
+           2017-2018, Kairo Araujo <kairo@kairo.eti.br>
+           2016, Kamil Szczygiel <kamil.szczygiel () intel.com>
+           2017-2018, Karsten Kaj Jakobsen <kj@patientsky.com>
+           2017, Kedar Kekan <kkekan@redhat.com>
+           2017-2018, Keller Fuchs (@KellerFuchs) <kellerfuchs@hashbang.sh>
+           2017, Kenneth D. Evensen <kdevensen@gmail.com>
+           2016-2017, Kenneth D. Evensen <kevensen@redhat.com>
+           2015, Kevin Brebanov <https://github.com/kbrebanov>
+           2018-2019, Kevin Breit (@kbreit)
+           2018-2019, Kevin Breit (@kbreit) <kevin.breit@kevinbreit.net>
+           2014, Kevin Carter <kevin.carter@rackspace.com>
+           2018-2019, Kevin Subileau (@ksubileau)
+           2014, Kim Nørgaard
+           2016-2017, Konstantin Shalygin <k0ste@k0ste.ru>
+           2016, Krzysztof Magosa <krzysztof@magosa.pl>
+           2018, KubeVirt Team <@kubevirt>
+           1996-2005, Kunihiro Ishiguro
+           2018, Kushal Das
+           2018, Lars Kellogg-Stedman <lars@redhat.com>
+           2015, Lawrence Leonard Gilbert <larry@L2G.to>
+           2016, Leandro Lisboa Penz <lpenz@lpenz.org>
+           2016-2019, Lenovo
+           2014, Leonid Evdokimov <leon@darkk.net.ru>
+           2015, Linus Unnebäck <linus@folkdatorn.se>
+           2017, Liran Nisanov <lirannis@gmail.com>
+           2015, LogicMonitor
+           2016-2018, Loic BLOT (@nerzhul) <loic.blot@unix-experience.fr>
+           2015, Luca Berruti <nadirio@gmail.com>
+           2018, Luca Lorenzetto (@remix_tj) <lorenzetto.luca@gmail.com>
+           2012, Luis Alberto Perez Lazaro <luisperlazaro@gmail.com>
+           2018, Luke Murphy <lukewm@riseup.net>
+           2015, Maciej Delmanowski <drybjed@gmail.com>
+           2014, Magnus Hedemark <mhedemar@redhat.com>
+           2015, Manuel Sousa <manuel.sousa@gmail.com>
+           2017, Marat Bakeev <hawara@gmail.com>
+           2017, Marc Sensenich <hello@marc-sensenich.com>
+           2017, Marc Tschapek <marc.tschapek@itelligence.de>
+           2017, Marc-Aurèle Brothier @marcaurele
+           2016, Marcin Skarbek <github@skarbek.name>
+           2012, Marco Vito Moscaritolo <marco@agavee.com>
+           2016, Marcos Diez <marcos@unitron.com.br>
+           2018, Marcus Watkins <marwatk@marcuswatkins.net>
+           2016, Mario Santos <mario.rf.santos@gmail.com>
+           2015-2017, Marius Gedminas <marius@gedmin.as>
+           2015, Marius Gedminas <marius@pov.lt>
+           2019, Marius Rieder <marius.rieder@scs.ch>
+           2015, Mark Hamilton <mhamilton@vmware.com>
+           2012, Mark Theunissen <mark.theunissen@gmail.com>
+           2017, Markus Teufelberger <mteufelberger+ansible@mgit.at>
+           2017, Martin Krizek <mkrizek@redhat.com>
+           2015, Mathew Davies <thepixeldeveloper@googlemail.com>
+           2016, Mathieu Bultel <mbultel@redhat.com>
+           2016, Matt Baldwin <baldwin@stackpointcloud.com>
+           2016, Matt Clay <matt@mystile.com>
+           2013, Matt Coddington <coddington@gmail.com>
+           2015-2018, Matt Davis <mdavis@ansible.com>
+           2015, Matt Davis <mdavis@rolpdog.com>
+           2015, Matt Davis <mdavis_ansible@rolpdog.com>
+           2013, Matt Hite <mhite@hotmail.com>
+           2015, Matt Makai <matthew.makai@gmail.com>
+           2014-2018, Matt Martz <matt@sivel.net>
+           2016, Matt Robinson <git@nerdoftheherd.com>
+           2012, Matt Wright <matt@nobien.net>
+           2016, Matthew Gamble <git@matthewgamble.net>
+           2014, Matthew Vernon <mcv21@cam.ac.uk>
+           2018, Matthias Fuchs <matthias.s.fuchs@gmail.com>
+           2013, Matthias Vogelgesang <matthias.vogelgesang@gmail.com>
+           2019, Matti Ranta, (@techknowlogick)
+           2014, Max Riveiro <kavu13@gmail.com>
+           2013, Maykel Moya <mmoya@speedyrails.com>
+           2018, Micah Hunsberger (@mhunsber)
+           2016-2018, Michael De La Rue
+           2018, Michael De La Rue <siblemitcom.mddlr@spamgourmet.com>
+           2012-2016, Michael DeHaan <michael.dehaan@gmail.com>
+           2012-2014, Michael DeHaan <michael@ansible.com>
+           2019, Michael Eaton <me@michaeleaton.me>
+           2017, Michael Eaton <meaton@iforium.com>
+           2016, Michael Gruener <michael.gruener@chaosmoon.net>
+           2014, Michael J. Schultz <mjschultz@gmail.com>
+           2015, Michael Perzel <michaelperzel@gmail.com>
+           2013-2015, Michael Scherer <misc@zarb.org>
+           2015, Michael Scherer <mscherer@redhat.com>
+           2018, Michael Tipton <mike () ibeta.org>
+           2014, Michael Warkentin <mwarkentin@gmail.com>
+           2013, Mike Grozak <mike.grozak@gmail.com>
+           2018, Mike Klebolt <michael.klebolt@centurylink.com>
+           2015, Mike Mochan
+           2018, Mikhail Gordeev
+           2018, Mikhail Yohman (@fragmentedpacket) <mikhail.yohman@gmail.com>
+           2017-2018, Milan Ilic <milani@nordeus.com>
+           2014, Mischa Peters <mpeters@a10networks.com>
+           2015, Nandaja Varma <nvarma@redhat.com>
+           2013, Nandor Sivok <nandor@gawker.com>
+           2014, Nate Coraor <nate@bx.psu.edu>
+           2015, Nate Coraor <nate@coraor.org>
+           2016-2019, NetApp, Inc
+           2017, Netservers Ltd <support@netservers.co.uk>
+           2017, New Contributor(s)
+           2018, Nicolai Buchwitz <nb@tipi-net.de>
+           2018, Nikhil Jain <nikjain@redhat.com>
+           2013, Nimbis Services
+           2013, Nimbis Services, Inc
+           2017, Noah Sparks <nsparks@outlook.com>
+           2019, Noe Gonzalez <noe.a.gonzalez@gmail.com>
+           2017, Nokia
+           2017, Obezimnaka Boms <t-ozboms@microsoft.com>
+           2016, Olaf Kilian <olaf.kilian@symanex.com>
+           2019, Olivier Blin <olivier.oblin@gmail.com>
+           2016, Olivier Boukili <boukili.olivier@gmail.com>
+           2018, Online SAS
+           2017-2018, Oracle and/or its affiliates
+           2018, Oren Ben Meir <oren.benmeir@cyberark.com>
+           2015, Original Contributor(s)
+           2016, Pason System Corporation
+           2013, Patrick Callahan <pmc@patrickcallahan.com>
+           2017, Patrick Deelman <patrick@patrickdeelman.nl>
+           2015, Patrick F. Marques <patrickfmarques@gmail.com>
+           2016, Patrick Ogenstad <@ogenstad>
+           2013, Patrick Pelletier <pp.pelletier@gmail.com>
+           2013, Patrik Lundin <patrik.lundin.swe@gmail.com>
+           2013, Patrik Lundin <patrik@sigterm.se>
+           2019, Patryk Cichy @PatTheSilent
+           2019, Patryk D. Cichy <patryk.d.cichy@gmail.com>
+           2017, Paul B <paul@bonaud.fr>
+           2017, Paul Baker <@paulquack>
+           2013-2015, Paul Durivage <paul.durivage@rackspace.com>
+           2015, Paul Markham <pmarkham@netrefinery.com>
+           2017, Paul Neumann
+           2014, Pavel Antonov <antonov@adwz.ru>
+           2018, Peter Gyorgy <gyorgy.peter@edu.bme.hu>
+           2015, Peter Mounce <public@neverrunwithscissors.com>
+           2014, Peter Oliver <ansible@mavit.org.uk>
+           2016, Peter Sagerson <psagers@ignorare.net>
+           2012-2016, Peter Sankauskas
+           2017, Peter Sprygada <psprygad@redhat.com>
+           2015-2016, Peter Sprygada <psprygada@ansible.com>
+           2013, Peter Sprygada <sprygada@gmail.com>
+           2017, Petr Lautrbach <plautrba@redhat.com>
+           2015, Phil Schwartz <schwartzmx@gmail.com>
+           2017, Philippe Dellaert <philippe@dellaert.org>
+           2013, Philippe Makowski
+           2013, Phillip Gentry <phillip@cx.com>
+           2016, Pierre Jodouin <pjodouin@virtualcomputing.solutions>
+           2017, Pierre-Louis Bonicoli <pierre-louis@libregerbil.fr>
+           2018, Piotr Olczak <piotr.olczak@redhat.com>
+           2019, Piotr Wojciechowski <piotr@it-playground.pl>
+           2018, Pluribus Networks
+           2016, PubNub Inc
+           2015, Quentin Stafford-Fraser
+           2015, Quentin Stafford-Fraser and Andy Baker
+           2015, Quentin Stafford-Fraser, with contributions gratefully acknowledged from:
+           2018, REY Remi
+           2013, RSD Services S.A
+           2016, Rackspace Australia
+           2015-2016, Rackspace US, Inc
+           2017, Radware LTD
+           2014, Ramon de la Fuente <ramon@delafuente.nl>
+           2013, Raul Melo
+           2014, Ravi Bhure <ravibhure@gmail.com>
+           2007-2019, Red Hat, Inc
+           2018, Remi Verchere <remi@verchere.fr>
+           2018, Remy Leone
+           2016, Renato Orgito <orgito@gmail.com>
+           2015-2019, René Moser <mail@renemoser.net>
+           2018, Rhys Campbell <rhys.james.campbell@googlemail.com>
+           2014, Richard Isaacson <richard.c.isaacson@gmail.com>
+           2017, Richard Levenberg <richard.levenberg@cosocloud.com>
+           2018, Ripon Banik (@riponbanik)
+           2015-2016, Ritesh Khadgaray <khadgaray () gmail.com>
+           2018, Rob White (@wimnat)
+           2019, Robert Williams
+           2016-2017, Roman Belyakovsky <ihryamzik () gmail.com>
+           2013, Romeo Theriault <romeot () hawaii.edu>
+           2014, Ruggero Marchei <ruggero.marchei@daemonzone.net>
+           2015, Russell Teague <rteague2 () csc.com>
+           2014, Rutger Spiertz <rutger@kumina.nl>
+           2018, Ryan Conway (@rylon)
+           2016-2017, Ryan Scott Brown <ryansb@redhat.com>
+           2017-2018, Sam Doran <sdoran@redhat.com>
+           2015, Sam Liu <sam.liu@activenetwork.com>
+           2016, Sam Yaple
+           2018, Samir Musali <samir.musali@logdna.com>
+           2016, Samuel Boucher <boucher.samuel.c@gmail.com>
+           2018, Samuel Carpentier <samuelcarpentier0@gmail.ca>
+           2018, Samy Coenen <samy.coenen@nubera.be>
+           2019, Sandeep Kasargod <sandeep@vexata.com>
+           2016, Saran Ahluwalia <ahlusar.ahluwalia@gmail.com>
+           2019, Saranya Sridharan
+           2013, Scott Anderson <scottanderson42@gmail.com>
+           2018, Scott Buchanan <sbuchanan@ri.pn>
+           2018, Sean Myers <sean.myers@redhat.com>
+           2019, Sebastiaan Mannem (@sebasmannem) <sebastiaan.mannem@enterprisedb.com>
+           2015, Sebastian Kornehl <sebastian.kornehl@asideas.de>
+           2018, Sebastian Schenzel <sebastian.schenzel@mailbox.org>
+           2014, Sebastien Rohaut <sebastien.rohaut@gmail.com>
+           2013-2014, Serge van Ginderachter <serge@vanginderachter.be>
+           2016-2018, Sertac Ozercan <seozerca@microsoft.com>
+           2014, Seth Edwards
+           2012, Seth Vidal (@skvidal)
+           2013, Shaun Zinck <shaun.zinck@gmail.com>
+           2016, Shinichi TAMURA (@tmshn)
+           2018, Shuang Wang <ooocamel@icloud.com>
+           2018, Simon Baerlocher <s.baerlocher@sbaerlocher.ch>
+           2017-2019, Simon Dodsley <simon@purestorage.com>
+           2018-2019, Simon Metzger <smnmtzgr@gmail.com>
+           2018, Simon Weald <ansible@simonweald.com>
+           2017, Sloane Hertel <shertel@redhat.com>
+           2018, Stanislas Lange (angristan) <angristan@pm.me>
+           2015, Stefan Berggren <nsg@nsg.cc>
+           2018, Stefan Heitmueller <stefan.heitmueller@gmx.com>
+           2016, Stephan Lohse <dev-github@ploek.org>
+           2018, Stephan Schwarz <stearz@gmx.de>
+           2012, Stephen Fromm <sfromm@gmail.com>
+           2014, Steve <yo@groks.org>
+           2016, Steve Baker <sbaker@redhat.com>
+           2015, Steve Gargan <steve.gargan@gmail.com>
+           2016, Steve Kuznetsov <skuznets@redhat.com>
+           2017, Steve Pletcher <steve@steve-pletcher.com>
+           2014, Steve Smith <ssmith@atlassian.com>
+           2017, Steven Bambling <smbambling@gmail.com>
+           2017, Stéphane Travassac <stravassac@gmail.com>
+           2019, Sumit Jaiswal (@sjaiswal)
+           2018, Sumit Kumar <sumit4@netapp.com>
+           2018, Sviatoslav Sydorenko <ssydoren@redhat.com>
+           2017, Swetha Chunduri (@schunduri)
+           2017, Sébastien DA ROCHA <sebastien@da-rocha.net>
+           2015, Tal Auslander <tal@cloudshare.com>
+           2014, Taneli Leppä <taneli@crasman.fi>
+           2016-2017, Ted Elhourani <ted@bigswitch.com>
+           2017, Ted Trask <ttrask01@yahoo.com>
+           2017, Tennis Smith, https://github.com/gamename
+           2018, Terry Jones <terry.jones@example.org>
+           2016, Thibaud Morel l'Horset <teebes@gmail.com>
+           2016, Thierno IB. BARRY @barryib
+           2017, Thierry Sallé (@seuf)
+           2016, Thilo Uttendorfer <tlo@sengaya.de>
+           2017, Thom Wiggers <ansible@thomwiggers.nl>
+           2017, Thomas Caravia <taca@kadisius.eu>
+           2016, Thomas Stringer <tomstr@microsoft.com>
+           2014, Tim Bielawa <tbielawa@redhat.com>
+           2015, Tim Hoiberg <tim.hoiberg@gmail.com>
+           2017, Tim Rightnour <thegarbledone@gmail.com>
+           2018, Tim Steinbach <tim@nequissimus.com>
+           2012-2013, Timothy Appnel <tim@appnel.com>
+           2014-2016, Timothy Vandenbrande <timothy.vandenbrande@gmail.com>
+           2016, Tom Melendez (@supertom) <tom@supertom.com>
+           2017, Tomas Karasek
+           2016, Tomas Karasek <tom.to.the.k@gmail.com>
+           2019, Tomi Raittinen <tomi.raittinen@gmail.com>
+           2018, Toshio Kuratomi <a.badger@gmail.com>
+           2017, Toshio Kuratomi <tkuraotmi@ansible.com>
+           2014-2018, Toshio Kuratomi <tkuratomi@ansible.com>
+           2015, Trond Hindenes
+           2014-2015, Trond Hindenes <trond@hindenes.com>
+           2012-2017, Ubiquiti Networks, Inc
+           2019, Uladzimir Klybik <uladzimir_klybik@epam.com>
+           2017, VEXXHOST, Inc
+           2015-2018, VMware, Inc
+           2018-2019, Varun Chopra (@chopraaa) <v@chopraaa.com>
+           2014, Vedit Firat Arig <firatarig@gmail.com>
+           2018, Victor Carceler <vcarceler@iespuigcastellar.xeill.net>
+           2019, Viktor Utkin <viktor_utkin@epam.com>
+           2013, Vincent Van der Kussen <vincent@vanderkussen.org>
+           2017, Vitaliy Zhhuta <zhhuta () gmail.com>
+           2015-2016, Vlad Glagolev <scm@vaygr.net>
+           2016, VyOS maintainers
+           2015, WP Engine, Inc
+           2014, Wayne Rosario <wrosario@ansible.com>
+           2017, Wayne Witzel III <wayne@riotousliving.com>
+           2017, Wei Gao <gaowei3@qq.com>
+           2015-2016, Werner Dijkerman <ikben@werner-dijkerman.nl>
+           2018, Western Telematic Inc
+           2018, Western Telematic Inc <kenp@wti.com>
+           2017-2018, Will Thames
+           2018, Will Thames <@willthames>
+           2017, Will Thames <will.thames@xvt.com.au>
+           2014-2018, Will Thames <will@thames.id.au>
+           2016, William L Thomson Jr
+           2018-2019, NAER William Leemans (@bushvin) <willie@elaba.net>
+           2018, Wojciech Sciesinski <wojciech[at]sciesinski[dot]net>
+           2017, XuXinkun <xuxinkun@gmail.com>
+           2014-2015, YAEGASHI Takeshi <yaegashi@debian.org>
+           2017, Yaacov Zamir <yzamir@redhat.com>
+           2018, Yaakov Kuperman <ykuperman@gmail.com>
+           2016-2018, Yanis Guenane <yanis+ansible@guenane.org>
+           2015, Yannig Perre <yannig.perre@gmail.com>
+           2013, Yap Sok Ann
+           2017, Yawei Wang <yaweiw@microsoft.com>
+           2013, Yeukhon Wong <yeukhon@acm.org>
+           2019, Yunge Zhu (@yungezz)
+           2018-2019, Yunge Zhu <yungez@microsoft.com>
+           2018-2019, Yunge Zhu, (@yungezz)
+           2017-2019, Yuwei Zhou <yuwzho@microsoft.com>
+           2019, Zim Kalinowski (@zikalino)
+           2017-2019, Zim Kalinowski <zikalino@microsoft.com>
+           2018-2019, Zim Kalinowski, (@zikalino)
+           2013, berenddeboer
+           2013, bleader
+           2018, chris Archibald <carchi@netapp.com>
+           1986-2003, cisco Systems, Inc
+           2017-2018, fxfitz
+           1999-2018, http://www.mikrotik.com
+           2016, maxn <nikolaev.makc@gmail.com>
+           2017, sookido
+           2016, techbizdev <techbizdev@paloaltonetworks.com>
+           2018, www.privaz.io Valletech AB
+License: GPL-3+
+
+Files: docs/docsite/_extensions/*
+       lib/ansible/module_utils/*
+       licenses/*
+Copyright: 2016, Adfinis SyGroup AG
+           2017, Alibaba Group Holding Limited. He Guimin <heguimin36@163.com>
+           2017, Ansible Project
+           2017, Apstra Inc <community@apstra.com>
+           2014, Benjamin Jolivot <bjolivot@gmail.com>
+           2017-2019, Cisco Systems Inc
+           2017, Citrix Systems
+           2017, Dag Wieers <dag@wieers.com>
+           2017, Daniel Korn <korndaniel1@gmail.com>
+           2016, Dell Inc
+           2017, Eike Frost <ei@kefro.st>
+           2018, Extreme Networks Inc
+           2017, Fortinet, Inc
+           2014, Franck Cuny <franck.cuny@gmail.com>
+           2017, Gaurav Rastogi <grastogi@avinetworks.com>
+           2016, Gregory Shulov <gregory.shulov@gmail.com>
+           2016-2017, Hewlett Packard Enterprise Development LP
+           2016, Hiroaki Nakamura <hnakamur@gmail.com>
+           2017, Jacob McGill (@jmcgill298)
+           2018, Johannes Brunswicker <johannes.brunswicker@gmail.com>
+           2018, Kevin Breit <kevin.breit@kevinbreit.net>
+           2018, Laurent Nicolas <laurentn@netapp.com>
+           2017, Lenovo
+           2017, Lenovo, Inc
+           2018, Luca 'remix_tj' Lorenzetto
+           2015, Marius Gedminas
+           2012-2013, Michael DeHaan <michael.dehaan@gmail.com>
+           2017, Michael Price <michael.price@netapp.com>
+           Norman Richards (original author of JSON lexer)
+           2018, Palo Alto Networks techbizdev <techbizdev@paloaltonetworks.com>
+           2015-2016, Peter Sprygada <psprygada@ansible.com>
+           2016-2019, Red Hat Inc
+           2017, Red Hat, Inc
+           2017, Simon Dodsley <simon@purestorage.com>
+           2018, Simon Weald <ansible@simonweald.com>
+           2017, Sumit Kumar <sumit4@netapp.com>
+           2017, Swetha Chunduri (@schunduri)
+           2016, Ted Elhourani <ted@bigswitch.com>
+           2017, Ted Timmons <ted@timmons.me>
+           2016, Thomas Krahn (@Nosmoht)
+           2016, Toshio Kuratomi <a.badger@gmail.com>
+           2016, Toshio Kuratomi <tkuratomi@ansible.com>
+           2017, Will Thames
+           2006-2017, the Pygments team
+           2006-2017, the respective authors (see AUTHORS file)
+License: BSD-2-clause
+
+Files: lib/ansible/module_utils/basic.py
+Copyright: 2012-2013, Michael DeHaan <michael.dehaan@gmail.com>
+           2016, Toshio Kuratomi <tkuratomi@ansible.com>
+License: BSD-2-Clause
+
+Files: lib/ansible/utils/unsafe_proxy.py
+Copyright: 2007, Google Inc
+           Licensed to PSF under a Contributor Agreement
+License: Python-2
+
+Files: lib/ansible/module_utils/distro/*
+       licenses/Apache-License.txt
+Copyright: 2015-2017, Nir Cohen
+           2019, Radware
+License: Apache-2
+
+Files: lib/ansible/module_utils/six/*
+       licenses/MIT-license.txt
+Copyright: 2010-2017, Benjamin Peterson
+License: Expat
+
+Files: lib/ansible/module_utils/urls.py
+Copyright: 2015, Copyright (c), Toshio Kuratomi <tkuratomi@ansible.com>
+           2012-2013, Michael DeHaan <michael.dehaan@gmail.com>
+License: BSD-2-Clause or Python-2
+Comment: 
+ Specifically, the match_hostname function and its supporting code are
+ under the terms of the Python, taken from the Python3 standard
+ library and adapted for Python2.  The specific code is delineated in
+ the codebase.
+
+Files: debian/*
+Copyright: 2014-2018, Harlan Lieberman-Berg <hlieberman@setec.io>
+           2013-2014, Janos Guljas <janos@resenje.org>
+           2016-2020, Lee Garrett <debian@rocketjump.eu>
+           2013-2014, Michael Vogt <mvo@debian.org>
+License: GPL-3+
+
+License: Apache-2
+ On Debian systems, the full text of the Apache
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/Apache-2.0'.
+
+License: BSD-2-Clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+ OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+ AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+ WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ The MIT License
+ .
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated
+ documentation files (the "Software"), to deal in the Software
+ without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to
+ whom the Software is furnished to do so, subject to the
+ following conditions:
+ .
+ The above copyright notice and this permission notice shall
+ be included in all copies or substantial portions of the
+ Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+ WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+ SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+
+License: GPL-3+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 3 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+  You should have received a copy of the GNU General Public
+  License along with this package; if not, write to the Free
+  Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+  Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
+
+License: Python-2
+ PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+ --------------------------------------------
+ .
+ 1. This LICENSE AGREEMENT is between the Python Software Foundation
+ ("PSF"), and the Individual or Organization ("Licensee") accessing
+ and otherwise using this software ("Python") in source or binary form
+ and its associated documentation.
+ .
+ 2. Subject to the terms and conditions of this License Agreement, PSF
+ hereby grants Licensee a nonexclusive, royalty-free, world-wide
+ license to reproduce, analyze, test, perform and/or display publicly,
+ prepare derivative works, distribute, and otherwise use Python alone
+ or in any derivative version, provided, however, that PSF's License
+ Agreement and PSF's notice of copyright, i.e., "Copyright (c) 2001,
+ 2002, 2003, 2004, 2005, 2006 Python Software Foundation; All Rights
+ Reserved" are retained in Python alone or in any derivative version
+ prepared by Licensee.
+ .
+ 3. In the event Licensee prepares a derivative work that is based on
+ or incorporates Python or any part thereof, and wants to make the
+ derivative work available to others as provided herein, then Licensee
+ hereby agrees to include in any such work a brief summary of the
+ changes made to Python.
+ .
+ 4. PSF is making Python available to Licensee on an "AS IS"
+ basis. PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
+ IMPLIED. BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND
+ DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR
+ FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON WILL NOT
+ INFRINGE ANY THIRD PARTY RIGHTS.
+ .
+ 5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON
+ FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A
+ RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON, OR ANY
+ DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
+ .
+ 6. This License Agreement will automatically terminate upon a material
+ breach of its terms and conditions.
+ .
+ 7. Nothing in this License Agreement shall be deemed to create any
+ relationship of agency, partnership, or joint venture between PSF and
+ Licensee. This License Agreement does not grant permission to use PSF
+ trademarks or trade name in a trademark sense to endorse or promote
+ products or services of Licensee, or any third party.
+ .
+ 8. By copying, installing or otherwise using Python, Licensee agrees
+ to be bound by the terms and conditions of this License Agreement.

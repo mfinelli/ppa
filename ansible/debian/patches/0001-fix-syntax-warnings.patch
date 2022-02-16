@@ -1,0 +1,47 @@
+Description: Fix syntax warnings
+ There are four SyntaxWarning when installing the Debian package, fix those.
+Author: Lee Garrett <debian@rocketjump.eu>
+Forwarded: not-needed
+Last-Update: 2021-03-24
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/collections-debian-merged/ansible_collections/azure/azcollection/plugins/modules/azure_rm_registrationassignment.py
++++ b/collections-debian-merged/ansible_collections/azure/azcollection/plugins/modules/azure_rm_registrationassignment.py
+@@ -230,7 +230,7 @@
+             response = old_response
+             self.results['state'] = response
+ 
+-        if self.state is 'present':
++        if self.state == 'present':
+             if self.results['state'].get('properties', None) is not None:
+                 registration_definition_id = self.results['state']['properties']['registration_definition_id']
+                 self.results['state']['properties'].clear()
+--- a/collections-debian-merged/ansible_collections/cyberark/pas/plugins/modules/cyberark_account.py
++++ b/collections-debian-merged/ansible_collections/cyberark/pas/plugins/modules/cyberark_account.py
+@@ -531,7 +531,7 @@
+                                 logging.debug(
+                                     ("child_module_parm_value: %s "
+                                      "child_existing_account_value=%s path=%s")
+-                                    (
++                                    % (
+                                         child_module_parm_value,
+                                         child_existing_account_value,
+                                         path_value,
+@@ -571,7 +571,7 @@
+                                 )
+                             logging.debug(
+                                 "parameter_name=%s  value=%s existing=%s"
+-                                (
++                                % (
+                                     path_value,
+                                     child_module_parm_value,
+                                     child_existing_account_value,
+@@ -632,7 +632,7 @@
+                         )
+                     logging.debug(
+                         "parameter_name=%s  value=%s existing=%s"
+-                        (
++                        % (
+                             parameter_name, module_parm_value,
+                             existing_account_value
+                         )
