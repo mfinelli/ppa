@@ -26,6 +26,6 @@ jobs:
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
-        run: ./release.bash ansible
+        run: ./release.bash kubectx
         env:
           SKIP_UPLOAD: "true"
