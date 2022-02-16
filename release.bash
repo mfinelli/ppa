@@ -5,7 +5,7 @@ if [[ $# -ne 1 ]]; then
   exit 1
 fi
 
-codename="$(grep UBUNTU_CODENAME /etc/os-release | awk -F= '{print $2}')"
+codename="$(./codename.sh)"
 
 mkdir -p ../build-area
 
@@ -25,6 +25,6 @@ brz builddeb -S
 cd ../../build-area
 pbuilder-dist "$codename" build *.dsc
 
-dput ppa:mfinelli/github *_source.changes
+dput ppa:mfinelli/supermario *_source.changes
 
 exit 0
