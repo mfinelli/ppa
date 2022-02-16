@@ -1,0 +1,5 @@
+kubectx (0.9.4-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Mario Finelli <ubuntu@mroml.com>  Wed, 16 Feb 2022 23:51:16 +0100
