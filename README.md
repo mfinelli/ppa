@@ -41,3 +41,24 @@ wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/a/ansible/ansible_2.10.7
 cd ansible
 tar xf ../ansible*.tar.xz
 ```
+
+## new packages
+
+To create a new package, download the source tarball and then run:
+
+```shell
+mkdir -p packagename
+cd packagename
+dh_make -f ./path/to/source.tar.gz -p pkgname_pkgver -s -y
+git commit -m "Add new package pkgname"
+```
+
+To enable the automated builder to download the original source, you will need
+to add a special comment to the `debian/control` file with the URL to the
+source: `# Source-Archive: https://example.com/package.tar.gz`.
+
+Then proceed to modify as necessary and create the test/publish workflow.
+
+## resources
+
+- Get valid section names: https://packages.debian.org/bullseye/
