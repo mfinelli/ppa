@@ -13,3 +13,4 @@ jobs:
       - run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - run: sudo apt install -y apt-file pbuilder ubuntu-dev-tools
       - run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
+      - run: ./build.bash ansible
