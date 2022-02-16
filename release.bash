@@ -29,7 +29,9 @@ else
   cd ../
 fi
 
+ls
 cd "$1"
+ls
 
 brz builddeb -S
 cd ../../build-area
