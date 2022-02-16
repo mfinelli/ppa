@@ -2,6 +2,10 @@
 name: Release
 on: push
 
+env:
+  DEBFULLNAME: Mario Finelli
+  DEBEMAIL: ubuntu@mroml.com
+
 jobs:
   release:
     name: Release
