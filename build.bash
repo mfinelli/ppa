@@ -25,4 +25,6 @@ brz builddeb -S
 cd ../../build-area
 pbuilder-dist "$codename" build *.dsc
 
+dput ppa:mfinelli/github *_source.changes
+
 exit 0
