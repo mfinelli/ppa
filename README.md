@@ -17,6 +17,12 @@ GitHub (from where it cannot be retrieved again).
 gpg --export-secret-keys 01EF7C8B | gpg -ear 36FDA306 > admin/01EF7C8B.asc
 ```
 
+The key must also be exported to the _Ubuntu_ keyserver:
+
+```shell
+gpg --send-keys --keyserver keyserver.ubuntu.com 01EF7C8B
+```
+
 ## backports
 
 To "backport" a package from a newer version of Ubuntu into the current LTS
