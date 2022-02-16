@@ -35,6 +35,7 @@ brz builddeb -S
 cd ../../build-area
 pbuilder-dist "$codename" build *.dsc
 
+[[ $SKIP_UPLOAD == true ]] && exit 0
 dput ppa:mfinelli/supermario *_source.changes
 
 exit 0
