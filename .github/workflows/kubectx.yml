@@ -1,0 +1,31 @@
+---
+name: kubectx
+on:
+  push:
+    paths:
+      - 'kubectx/**'
+      - .github/workflows/kubectx.yml
+
+env:
+  DEBFULLNAME: Mario Finelli
+  DEBEMAIL: ubuntu@mroml.com
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Detect ubuntu release codename
+        run: echo "::set-output name=codename::$(./codename.sh)"
+        id: ubuntu
+      - name: Import signing key into local keyring
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Install global packaging dependencies
+        run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
+      - name: Setup pbuilder
+        run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
+      - name: Test and then publish to PPA
+        run: ./release.bash ansible
+        env:
+          SKIP_UPLOAD: "true"
