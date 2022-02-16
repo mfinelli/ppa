@@ -17,6 +17,16 @@ if [[ $1 == ansible ]]; then
   # use the UMD mirror -- archive.ubuntu.com is not available over https
   wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/a/ansible/ansible_2.10.7+merged+base+2.10.8+dfsg.orig.tar.xz
   cd ../ppa
+else
+  cd "$1"
+
+  # download the source into the correct location
+  surl="$(grep -m1 '^# Source-Archive: ' debian/control |
+    sed 's/^# Source-Archive: //')"
+  fname="$(head -n1 debian/changelog | sed 's/^\(.*\) (\(.*\)) .*$/\1_\2/')"
+  curl -fsSL -o "../$fname.orig.tar.gz" "$surl"
+
+  cd ../
 fi
 
 cd "$1"
