@@ -30,4 +30,6 @@ jobs:
         env:
           SKIP_UPLOAD: "true"
       - name: Inspect package contents
-        run: find ~/pbuilder -name '*.deb' -exec lesspipe {} \;
+        run: |
+          find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
+            -name '*.deb' -exec lesspipe {} \;
