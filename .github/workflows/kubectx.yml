@@ -30,14 +30,4 @@ jobs:
         env:
           SKIP_UPLOAD: "true"
       - name: Inspect package contents
-        run: |
-          pwd
-          find ../../ -name '*.deb'
-          find ../../ -name '*.deb' -exec lesspipe {} \;
-          ls
-          lesspipe *.deb
-          ls ..
-          ls ../build-area/*.deb
-          lesspipe ../build-area/*.deb
-          ls ../..
-          lesspipe ../../*.deb
+        run: find ~/pbuilder -name '*.deb' -exec lesspipe {} \;
