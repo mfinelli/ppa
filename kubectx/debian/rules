@@ -29,13 +29,13 @@ override_dh_install:
 		debian/kubectx/usr/share/zsh/vendor-completions
 	cp -f kubectx debian/kubectx/usr/bin
 	cp -f kubens debian/kubectx/usr/bin
-	cp -f completions/kubectx.bash \
+	cp -f completion/kubectx.bash \
 		debian/kubectx/usr/share/bash-completion/completions/kubectx
-	cp -f completions/kubens.bash \
+	cp -f completion/kubens.bash \
 		debian/kubectx/usr/share/bash-completion/completions/kubens
-	cp -f completions/kubectx.zsh \
+	cp -f completion/kubectx.zsh \
 		debian/kubectx/usr/share/zsh/vendor-completions/_kubectx
-	cp -f completions/kubens.zsh \
+	cp -f completion/kubens.zsh \
 		debian/kubectx/usr/share/zsh/vendor-completions/_kubens
 	dh_install
 	dh_missing
