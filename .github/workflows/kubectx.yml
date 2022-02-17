@@ -30,4 +30,11 @@ jobs:
         env:
           SKIP_UPLOAD: "true"
       - name: Inspect package contents
-        run: lesspipe ../build-area/*.deb
+        run:
+          pwd
+          ls
+          lesspipe *.deb
+          ls ..
+          lesspipe ../build-area/*.deb
+          ls ../..
+          lesspipe ../../*.deb
