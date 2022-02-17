@@ -23,9 +23,19 @@
 #override_dh_auto_configure:
 #	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
-install:
-	install -Dm0755 kubectx kubens -t $(CURDIR)/usr/bin
-	install -Dm0644 -p completion/kubectx.bash $(CURDIR)/usr/share/bash-completion/completions/kubectx
-	install -Dm0644 -p completion/kubens.bash $(CURDIR)/usr/share/bash-completion/completions/kubens
-	install -Dm0644 -p completion/kubectx.zsh $(CURDIR)/usr/share/zsh/vendor-completions/_kubectx
-	install -Dm0644 -p completion/kubens.zsh $(CURDIR)/usr/share/zsh/vendor-completions/_kubens
+override_dh_install:
+	mkdir -p debian/kubectx/usr/bin \
+		debian/kubectx/usr/share/bash-completion/completions \
+		debian/kubectx/usr/share/zsh/vendor-completions
+	cp -f kubectx debian/kubectx/usr/bin
+	cp -f kubens debian/kubectx/usr/bin
+	cp -f completions/kubectx.bash \
+		debian/kubectx/usr/share/bash-completion/completions/kubectx
+	cp -f completions/kubens.bash \
+		debian/kubectx/usr/share/bash-completion/completions/kubens
+	cp -f completions/kubectx.zsh \
+		debian/kubectx/usr/share/zsh/vendor-completions/_kubectx
+	cp -f completions/kubens.zsh \
+		debian/kubectx/usr/share/zsh/vendor-completions/_kubens
+	dh_install
+	dh_missing
