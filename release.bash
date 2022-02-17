@@ -23,15 +23,14 @@ else
   # download the source into the correct location
   surl="$(grep -m1 '^# Source-Archive: ' debian/control |
     sed 's/^# Source-Archive: //')"
-  fname="$(head -n1 debian/changelog | sed 's/^\(.*\) (\(.*\)) .*$/\1_\2/')"
-  curl -fsSL -o "../$fname.orig.tar.gz" "$surl"
+  fname="$(head -n1 debian/changelog | sed 's/^\(.*\) (\(.*\)) .*$/\1_\2/' |
+    sed 's/^\(.*\)-.*/\1/')"
+  curl -fsSL -o "../../$fname.orig.tar.gz" "$surl"
 
   cd ../
 fi
 
-ls
 cd "$1"
-ls
 
 brz builddeb -S
 cd ../../build-area
