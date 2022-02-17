@@ -29,3 +29,5 @@ jobs:
         run: ./release.bash kubectx
         env:
           SKIP_UPLOAD: "true"
+      - name: Inspect package contents
+        run: lesspipe ../build-area/*.deb
