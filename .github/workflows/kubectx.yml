@@ -31,10 +31,13 @@ jobs:
           SKIP_UPLOAD: "true"
       - name: Inspect package contents
         run:
+          set -x
           pwd
+          find ../../ -name '*.deb'
           ls
           lesspipe *.deb
           ls ..
+          ls ../build-area/*.deb
           lesspipe ../build-area/*.deb
           ls ../..
           lesspipe ../../*.deb
