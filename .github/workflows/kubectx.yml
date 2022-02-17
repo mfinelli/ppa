@@ -31,9 +31,9 @@ jobs:
           SKIP_UPLOAD: "true"
       - name: Inspect package contents
         run:
-          set -x
           pwd
           find ../../ -name '*.deb'
+          find ../../ -name '*.deb' -exec lesspipe {} \;
           ls
           lesspipe *.deb
           ls ..
