@@ -1,0 +1,22 @@
+Index: debcargo/Cargo.toml
+===================================================================
+--- debcargo.orig/Cargo.toml
++++ debcargo/Cargo.toml
+@@ -52,7 +52,7 @@ version = "0.9"
+ version = "1.0"
+
+ [dependencies.semver]
+-version = "0.10"
++version = "0.9"
+
+ [dependencies.semver-parser]
+ version = "0.9"
+@@ -70,7 +70,7 @@ version = "0.4"
+ version = "3"
+
+ [dependencies.textwrap]
+-version = "0.13"
++version = "0.11"
+
+ [dependencies.toml]
+ version = "0.5"

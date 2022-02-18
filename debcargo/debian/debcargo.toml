@@ -1,0 +1,10 @@
+overlay = "."
+uploaders = ["Ximin Luo <infinity0@debian.org>"]
+
+[source]
+build_depends = ["rustc:native (>= 1.29)"]
+
+[packages.bin]
+section = "devel"
+depends = ["quilt"]
+recommends = ["dh-cargo"]

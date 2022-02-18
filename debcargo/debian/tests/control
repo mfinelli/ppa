@@ -1,0 +1,14 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test debcargo 2.4.4 --all-targets --all-features
+Features: test-name=rust-debcargo:@
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test debcargo 2.4.4 --all-targets
+Features: test-name=librust-debcargo-dev:default
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test debcargo 2.4.4 --all-targets --no-default-features
+Features: test-name=librust-debcargo-dev:
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
