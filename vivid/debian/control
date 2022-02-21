@@ -1,15 +1,25 @@
 Source: vivid
-Section: unknown
+Section: utils
 Priority: optional
 Maintainer: Mario Finelli <ubuntu@mroml.com>
 Build-Depends: debhelper-compat (= 12)
 Standards-Version: 4.4.1
-Homepage: <insert the upstream URL, if relevant>
+Homepage: https://github.com/sharkdp/vivid
 #Vcs-Browser: https://salsa.debian.org/debian/vivid
 #Vcs-Git: https://salsa.debian.org/debian/vivid.git
+# Source-Archive: https://github.com/sharkdp/vivid/archive/v0.8.0.tar.gz
 
 Package: vivid
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: A themeable LS_COLORS generator with a rich filetype datebase
+ vivid is a generator for the LS_COLORS environment variable that controls
+ the colorized output of ls, tree, fd, bfs, dust and many other tools.
+ .
+ It uses a YAML configuration format for the filetype-database and the color
+ themes. In contrast to dircolors, the database and the themes are organized
+ in different files. This allows users to choose and customize color themes
+ independent from the collection of file extensions. Instead of using cryptic
+ ANSI escape codes, colors can be specified in the RRGGBB format and will be
+ translated to either truecolor (24-bit) ANSI codes or 8-bit codes for older
+ terminal emulators.
