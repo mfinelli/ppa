@@ -3,6 +3,8 @@
 Packages for my
 [PPA](https://launchpad.net/~mfinelli/+archive/ubuntu/supermario).
 
+TODO: add note about editing the PPA settings to enable other architectures
+
 ## gpg
 
 We use a dedicated GPG key for signing since we need to store the private key
@@ -62,3 +64,7 @@ Then proceed to modify as necessary and create the test/publish workflow.
 ## resources
 
 - Get valid section names: https://packages.debian.org/bullseye/
+- Upload steps: https://help.launchpad.net/Packaging/PPA/Uploading
+- Package naming conventions: https://askubuntu.com/a/4951
+- Package naming conventions: https://help.launchpad.net/Packaging/PPA/BuildingASourcePackage#Versioning
+- Building for multiple architectures: https://askubuntu.com/a/765149
