@@ -34,7 +34,7 @@ else
     # if we have a zip then unzip it and repack it into a tarball
     # the debian build system can't handle zips
     curl -fsSL -o tmp.zip "$surl"
-    ../zip2tar.bash tmp.zip "../../$fnamt.orig.tar.gz"
+    ../zip2tar.bash tmp.zip "../../$fname.orig.tar.gz"
     rm tmp.zip
   else
     # otherwise just download it like normal
