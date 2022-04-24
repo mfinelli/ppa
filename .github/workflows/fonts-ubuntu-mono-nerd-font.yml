@@ -33,3 +33,28 @@ jobs:
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
             -name '*.deb' -exec lesspipe {} \;
+
+  port:
+    name: Port ${{ matrix.ubuntu }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ubuntu: [jammy]
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    container: ubuntu:${{ matrix.ubuntu }}
+    needs: [release]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update and install dependencies
+        run: |
+          apt update -y
+          apt upgrade -y
+          apt install -y debhelper gnupg ubuntu-dev-tools
+      - name: Import signing key into local keyring
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Build the source package for the target and publish to PPA
+        run: ./port.bash fonts-ubuntu-mono-nerd-font ${{ matrix.ubuntu }}
+        env:
+          SKIP_UPLOAD: "true"
