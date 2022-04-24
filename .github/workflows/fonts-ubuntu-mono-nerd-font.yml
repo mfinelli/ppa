@@ -17,11 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:jammy
     steps:
-      - run: |
-          pwd
-          echo "HOME: $HOME"
-          id -u
-          whoami
       - uses: actions/checkout@v3
       - name: Detect ubuntu release codename
         run: echo "::set-output name=codename::$(./codename.sh)"
@@ -33,7 +28,9 @@ jobs:
       - name: Install global packaging dependencies
         run: apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
       - name: Setup pbuilder
-        run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
+        run: |
+          chown -R $(whoami):$(whoami) $HOME
+          pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
         run: ./release.bash fonts-ubuntu-mono-nerd-font
         env:
