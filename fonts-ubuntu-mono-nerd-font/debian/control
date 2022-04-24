@@ -1,0 +1,19 @@
+Source: fonts-ubuntu-mono-nerd-font
+Section: fonts
+Priority: optional
+Maintainer: Mario Finelli <ubuntu@mroml.com>
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: unzip
+Standards-Version: 4.5.0
+Homepage: https://github.com/ryanoasis/nerd-fonts
+Rules-Requires-Root: no
+# Source-Archive: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/UbuntuMono.zip
+
+Package: fonts-ubuntu-mono-nerd-font
+Architecture: all
+Depends: ${misc:Depends}
+Description: Ubuntu Mono font patched with nerd fonts
+ Nerd Fonts is a project that patches developer targeted fonts with a
+ high number of glyphs (icons). Specifically to add a high number of
+ extra glyphs from popular 'iconic fonts' such as Font Awesome,
+ Devicons, Octicons, and others.
