@@ -9,6 +9,7 @@ on:
 env:
   DEBFULLNAME: Mario Finelli
   DEBEMAIL: ubuntu@mroml.com
+  DEBIAN_FRONTEND: noninteractive
 
 jobs:
   release:
