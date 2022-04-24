@@ -21,7 +21,7 @@ jobs:
         run: echo "::set-output name=codename::$(./codename.sh)"
         id: ubuntu
       - name: install global dependencies
-        run: apt install -y gnupg
+        run: apt update -y && apt upgrade -y && apt install -y gnupg
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Install global packaging dependencies
