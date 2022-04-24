@@ -2,6 +2,3 @@
 
 %:
 	dh $@
-
-override_dh_auto_configure:
-	for i in $$(ls *.zip); do TZ=Etc/UTC unzip $$i; done
