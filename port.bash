@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 
 # applies a patch to convert the package into a release that we're _not_
 # running on and then publishes it to the PPA
@@ -47,6 +47,7 @@ cd "$1"
 debuild -S
 cd ../
 
+ls *_source.changes
 [[ $SKIP_UPLOAD == true ]] && exit 0
 dput ppa:mfinelli/supermario *_source.changes
 
