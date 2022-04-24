@@ -35,6 +35,7 @@ if [[ $1 == fonts-ubuntu-mono-nerd-font ]]; then
   # because we repack the original zip file into a tar gz, the timestamp
   # header changes and launchpad rejects the upload as using a different
   # source. resolve by downloading directly the original source from the PPA
+  # https://help.launchpad.net/Packaging/UploadErrors#Apparently_successful_upload_followed_by_a_rejection_email
   surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/2.1.0-1~focal1~ppa1/fonts-ubuntu-mono-nerd-font_2.1.0.orig.tar.gz"
 fi
 
