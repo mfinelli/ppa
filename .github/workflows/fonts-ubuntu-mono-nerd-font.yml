@@ -20,10 +20,12 @@ jobs:
       - name: Detect ubuntu release codename
         run: echo "::set-output name=codename::$(./codename.sh)"
         id: ubuntu
+      - name: install global dependencies
+        run: apt install -y gnupg
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Install global packaging dependencies
-        run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
+        run: apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
