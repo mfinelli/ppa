@@ -2,9 +2,9 @@ Source: fonts-ubuntu-mono-nerd-font
 Section: fonts
 Priority: optional
 Maintainer: Mario Finelli <ubuntu@mroml.com>
-Build-Depends: debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 12)
 Build-Depends-Indep: unzip
-Standards-Version: 4.5.0
+Standards-Version: 4.4.1
 Homepage: https://github.com/ryanoasis/nerd-fonts
 Rules-Requires-Root: no
 # Source-Archive: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/UbuntuMono.zip
