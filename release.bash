@@ -44,6 +44,10 @@ else
   cd ../
 fi
 
+# remove any patches we have for other relase distributions because
+# they interfere with the build process
+find "$1" -name '*.patch' -maxdepth 1 -exec rm {} \;
+
 cd "$1"
 
 brz builddeb -S
