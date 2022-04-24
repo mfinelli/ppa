@@ -1,0 +1,36 @@
+---
+name: fonts-ubuntu-mono-nerd-font.yml
+on:
+  push:
+    paths:
+      - 'fonts-ubuntu-mono-nerd-font/**'
+      - .github/workflows/fonts-ubuntu-mono-nerd-font.yml
+
+env:
+  DEBFULLNAME: Mario Finelli
+  DEBEMAIL: ubuntu@mroml.com
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    container: ubuntu:jammy
+    steps:
+      - uses: actions/checkout@v3
+      - name: Detect ubuntu release codename
+        run: echo "::set-output name=codename::$(./codename.sh)"
+        id: ubuntu
+      - name: Import signing key into local keyring
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Install global packaging dependencies
+        run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
+      - name: Setup pbuilder
+        run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
+      - name: Test and then publish to PPA
+        run: ./release.bash fonts-ubuntu-mono-nerd-font
+        env:
+          SKIP_UPLOAD: "true"
+      - name: Inspect package contents
+        run: |
+          find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
+            -name '*.deb' -exec lesspipe {} \;
