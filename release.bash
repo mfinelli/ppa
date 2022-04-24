@@ -29,7 +29,17 @@ else
     sed 's/^# Source-Archive: //')"
   fname="$(head -n1 debian/changelog | sed 's/^\(.*\) (\(.*\)) .*$/\1_\2/' |
     sed 's/^\(.*\)-.*/\1/')"
-  curl -fsSL -o "../../$fname.orig.tar.gz" "$surl"
+
+  if [[ $(basename "$surl") =~ \.zip$ ]]; then
+    # if we have a zip then unzip it and repack it into a tarball
+    # the debian build system can't handle zips
+    curl -fsSL -o tmp.zip "$surl"
+    ../zip2pdf.bash tmp.zip "../../$fnamt.orig.tar.gz"
+    rm tmp.zip
+  else
+    # otherwise just download it like normal
+    curl -fsSL -o "../../$fname.orig.tar.gz" "$surl"
+  fi
 
   cd ../
 fi
