@@ -9,7 +9,7 @@ on:
 env:
   DEBFULLNAME: Mario Finelli
   DEBEMAIL: ubuntu@mroml.com
-  TRIGGER: "a"
+  TRIGGER: "2"
 
 jobs:
   release:
