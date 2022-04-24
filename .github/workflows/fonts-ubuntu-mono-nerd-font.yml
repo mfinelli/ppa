@@ -17,6 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:jammy
     steps:
+      - run: |
+          pwd
+          echo "HOME: $HOME"
+          id -u
+          whoami
       - uses: actions/checkout@v3
       - name: Detect ubuntu release codename
         run: echo "::set-output name=codename::$(./codename.sh)"
