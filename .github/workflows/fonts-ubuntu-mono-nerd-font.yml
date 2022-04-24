@@ -9,7 +9,6 @@ on:
 env:
   DEBFULLNAME: Mario Finelli
   DEBEMAIL: ubuntu@mroml.com
-  TRIGGER: "1"
 
 jobs:
   release:
@@ -28,8 +27,6 @@ jobs:
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
         run: ./release.bash fonts-ubuntu-mono-nerd-font
-        env:
-          SKIP_UPLOAD: "true"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
@@ -57,5 +54,3 @@ jobs:
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash fonts-ubuntu-mono-nerd-font ${{ matrix.ubuntu }}
-        env:
-          SKIP_UPLOAD: "true"
