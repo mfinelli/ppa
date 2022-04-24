@@ -23,7 +23,7 @@ fi
 # first apply the patch for the distribution relase
 patch -p1 -N -i "$1/$2.patch"
 # then remove all patch files as they interfere with the build process
-find "$1" -name '*.patch' -maxdepth 1 -exec rm {} \;
+find "$1" -name '*.patch' -maxdepth 1 -exec rm -v {} \;
 
 # download the sources like we do normally
 surl="$(grep -m1 '^# Source-Archive: ' "$1/debian/control" |
