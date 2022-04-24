@@ -31,16 +31,17 @@ surl="$(grep -m1 '^# Source-Archive: ' "$1/debian/control" |
 fname="$(head -n1 "$1/debian/changelog" | sed 's/^\(.*\) (\(.*\)) .*$/\1_\2/' |
   sed 's/^\(.*\)-.*/\1/')"
 
-if [[ $(basename "$surl") =~ \.zip$ ]]; then
-  # if we have a zip then unzip it and repack it into a tarball
-  # the debian build system can't handle zips
-  curl -fsSL -o tmp.zip "$surl"
-  ./zip2tar.bash tmp.zip "$fname.orig.tar.gz"
-  rm tmp.zip
-else
-  # otherwise just download it like normal
-  curl -fsSL -o "$fname.orig.tar.gz" "$surl"
+if [[ $1 == fonts-ubuntu-mono-nerd-font ]]; then
+  # because we repack the original zip file into a tar gz, the timestamp
+  # header changes and launchpad rejects the upload as using a different
+  # source. resolve by downloading directly the original source from the PPA
+  surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/2.1.0-1~focal1~ppa1/fonts-ubuntu-mono-nerd-font_2.1.0.orig.tar.gz"
 fi
+
+# we don't have any special zip handling here because we will always need to
+# download the "offical" archive from the PPA before porting to new
+# distributions
+curl -fsSL -o "$fname.orig.tar.gz" "$surl"
 
 # do the build
 cd "$1"
