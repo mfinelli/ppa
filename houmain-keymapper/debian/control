@@ -5,7 +5,8 @@ Maintainer: Mario Finelli <ubuntu@mroml.com>
 Build-Depends:
  debhelper-compat (= 12),
  cmake,
- git
+ git,
+ pkg-config
 Standards-Version: 4.4.1
 Homepage: https://github.com/houmain/keymapper
 # Source-Archive: https://github.com/houmain/keymapper/archive/refs/tags/1.9.2.tar.gz

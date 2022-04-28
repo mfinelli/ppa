@@ -24,7 +24,7 @@ jobs:
       - name: Install global packaging dependencies
         run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
       - name: Install build dependencies
-        run: sudo apt install -y cmake git
+        run: sudo apt install -y cmake git pkg-config
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
