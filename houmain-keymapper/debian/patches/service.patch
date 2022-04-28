@@ -1,0 +1,13 @@
+diff --git a/extra/lib/systemd/system/keymapperd.service b/extra/lib/systemd/system/keymapperd.service
+index 7d84858..5fc333a 100644
+--- a/extra/lib/systemd/system/keymapperd.service
++++ b/extra/lib/systemd/system/keymapperd.service
+@@ -2,7 +2,7 @@
+ Description=Keymapper Daemon
+ 
+ [Service]
+-ExecStart=keymapperd
++ExecStart=/usr/bin/keymapperd
+ 
+ [Install]
+ WantedBy=multi-user.target
