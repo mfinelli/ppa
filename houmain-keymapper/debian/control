@@ -23,7 +23,7 @@ Depends:
  libusb-1.0-0,
  libx11-6,
  libdbus-1-3,
- libwayland-dev,
+ libwayland-client0,
  ${shlibs:Depends},
  ${misc:Depends}
 Description: A cross-platform context-aware key remapper
