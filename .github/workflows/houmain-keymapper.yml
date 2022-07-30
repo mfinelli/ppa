@@ -33,6 +33,8 @@ jobs:
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
         run: ./release.bash houmain-keymapper
+        env:
+          SKIP_UPLOAD: "true"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \

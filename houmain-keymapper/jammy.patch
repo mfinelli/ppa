@@ -1,0 +1,32 @@
+diff --git a/houmain-keymapper/debian/changelog b/houmain-keymapper/debian/changelog
+index 405a8d0..54ebcb9 100644
+--- a/houmain-keymapper/debian/changelog
++++ b/houmain-keymapper/debian/changelog
+@@ -1,4 +1,4 @@
+-houmain-keymapper (1.9.2-1~focal1~ppa1) focal; urgency=medium
++houmain-keymapper (1.9.2-1~jammy1~ppa1) jammy; urgency=medium
+ 
+   * Initial release
+ 
+diff --git a/houmain-keymapper/debian/control b/houmain-keymapper/debian/control
+index d9a194c..be1239c 100644
+--- a/houmain-keymapper/debian/control
++++ b/houmain-keymapper/debian/control
+@@ -3,7 +3,7 @@ Section: utils
+ Priority: optional
+ Maintainer: Mario Finelli <ubuntu@mroml.com>
+ Build-Depends:
+- debhelper-compat (= 12),
++ debhelper-compat (= 13),
+  cmake,
+  git,
+  pkg-config,
+@@ -12,7 +12,7 @@ Build-Depends:
+  libx11-dev,
+  libdbus-1-dev,
+  libwayland-dev,
+-Standards-Version: 4.4.1
++Standards-Version: 4.5.0
+ Homepage: https://github.com/houmain/keymapper
+ # Source-Archive: https://github.com/houmain/keymapper/archive/refs/tags/1.9.2.tar.gz
+ 
