@@ -15,7 +15,7 @@ jobs:
     name: Release
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Detect ubuntu release codename
         run: echo "::set-output name=codename::$(./codename.sh)"
         id: ubuntu
@@ -33,8 +33,6 @@ jobs:
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
         run: ./release.bash houmain-keymapper
-        env:
-          SKIP_UPLOAD: "true"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
@@ -44,3 +42,26 @@ jobs:
           name: houmain-keymapper
           path: |
             ~/pbuilder/${{ steps.ubuntu.outputs.codename}}_result/*.deb
+
+  port:
+    name: Port ${{ matrix.ubuntu }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ubuntu: [jammy]
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    container: ubuntu:${{ matrix.ubuntu }}
+    needs: [release]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update and install dependencies
+        run: |
+          apt update -y
+          apt upgrade -y
+          apt install -y debhelper gnupg ubuntu-dev-tools
+      - name: Import signing key into local keyring
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Build the source package for the target and publish to PPA
+        run: ./port.bash houmain-keymapper ${{ matrix.ubuntu }}

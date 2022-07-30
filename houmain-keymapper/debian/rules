@@ -27,6 +27,3 @@ override_dh_auto_configure:
 
 override_dh_installsystemd:
 	dh_installsystemd --name=keymapperd
-
-# override_dh_systemd_start:
-# 	dh_systemd_start keymapperd.service
