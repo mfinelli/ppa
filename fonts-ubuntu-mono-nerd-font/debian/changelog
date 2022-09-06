@@ -1,3 +1,9 @@
+fonts-ubuntu-mono-nerd-font (2.2.1-1~focal1~ppa1) focal; urgency=medium
+
+  * Update to 2.2.1
+
+ -- Mario Finelli <ubuntu@mroml.com>  Mon, 5 Sep 2022 21:01:43 -0400
+
 fonts-ubuntu-mono-nerd-font (2.1.0-1~focal1~ppa1) focal; urgency=medium
 
   * Initial release
