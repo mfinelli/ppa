@@ -33,6 +33,8 @@ jobs:
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
         run: ./release.bash houmain-keymapper
+        env:
+          SKIP_UPLOAD: "false"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
@@ -69,3 +71,5 @@ jobs:
             libusb-1.0-0-dev libx11-dev libdbus-1-dev libwayland-dev
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash houmain-keymapper ${{ matrix.ubuntu }}
+        env:
+          SKIP_UPLOAD: "false"
