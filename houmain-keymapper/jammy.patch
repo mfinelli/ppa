@@ -1,15 +1,15 @@
 diff --git a/houmain-keymapper/debian/changelog b/houmain-keymapper/debian/changelog
-index d36913a..3246b24 100644
+index 7711bbb..d316447 100644
 --- a/houmain-keymapper/debian/changelog
 +++ b/houmain-keymapper/debian/changelog
 @@ -1,4 +1,4 @@
--houmain-keymapper (2.1.6-1~focal1~ppa1) focal; urgency=medium
-+houmain-keymapper (2.1.6-1~jammy1~ppa1) jammy; urgency=medium
+-houmain-keymapper (2.3.0-1~focal1~ppa1) focal; urgency=medium
++houmain-keymapper (2.3.0-1~jammy1~ppa1) jammy; urgency=medium
  
-   * Update to 2.1.6
+   * Update to 2.3.0
  
 diff --git a/houmain-keymapper/debian/control b/houmain-keymapper/debian/control
-index 511ff8f..9a60217 100644
+index 7368386..b46571e 100644
 --- a/houmain-keymapper/debian/control
 +++ b/houmain-keymapper/debian/control
 @@ -3,7 +3,7 @@ Section: utils
@@ -28,5 +28,5 @@ index 511ff8f..9a60217 100644
 -Standards-Version: 4.4.1
 +Standards-Version: 4.5.0
  Homepage: https://github.com/houmain/keymapper
- # Source-Archive: https://github.com/houmain/keymapper/archive/refs/tags/2.1.6.tar.gz
+ # Source-Archive: https://github.com/houmain/keymapper/archive/refs/tags/2.3.0.tar.gz
  
