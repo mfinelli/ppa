@@ -1,15 +1,15 @@
 diff --git a/fonts-ubuntu-mono-nerd-font/debian/changelog b/fonts-ubuntu-mono-nerd-font/debian/changelog
-index 40a0785..a5d47e2 100644
+index dc78660..7706471 100644
 --- a/fonts-ubuntu-mono-nerd-font/debian/changelog
 +++ b/fonts-ubuntu-mono-nerd-font/debian/changelog
 @@ -1,4 +1,4 @@
--fonts-ubuntu-mono-nerd-font (2.2.1-1~focal1~ppa1) focal; urgency=medium
-+fonts-ubuntu-mono-nerd-font (2.2.1-1~jammy1~ppa1) jammy; urgency=medium
+-fonts-ubuntu-mono-nerd-font (2.2.2-1~focal1~ppa1) focal; urgency=medium
++fonts-ubuntu-mono-nerd-font (2.2.2-1~jammy1~ppa1) jammy; urgency=medium
  
-   * Update to 2.2.1
+   * Update to 2.2.2
  
 diff --git a/fonts-ubuntu-mono-nerd-font/debian/control b/fonts-ubuntu-mono-nerd-font/debian/control
-index 031fa32..f6ffdb1 100644
+index 7f0807e..e3ccb2e 100644
 --- a/fonts-ubuntu-mono-nerd-font/debian/control
 +++ b/fonts-ubuntu-mono-nerd-font/debian/control
 @@ -2,9 +2,9 @@ Source: fonts-ubuntu-mono-nerd-font
@@ -23,4 +23,4 @@ index 031fa32..f6ffdb1 100644
 +Standards-Version: 4.5.0
  Homepage: https://github.com/ryanoasis/nerd-fonts
  Rules-Requires-Root: no
- # Source-Archive: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/UbuntuMono.zip
+ # Source-Archive: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/UbuntuMono.zip
