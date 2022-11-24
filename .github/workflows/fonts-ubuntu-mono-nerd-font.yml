@@ -1,5 +1,5 @@
 ---
-name: fonts-ubuntu-mono-nerd-font.yml
+name: fonts-ubuntu-mono-nerd-font
 on:
   push:
     paths:
@@ -57,4 +57,4 @@ jobs:
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash fonts-ubuntu-mono-nerd-font ${{ matrix.ubuntu }}
         env:
-          SKIP_UPLOAD: "false"
+          SKIP_UPLOAD: "true"
