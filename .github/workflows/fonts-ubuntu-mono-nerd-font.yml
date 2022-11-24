@@ -28,7 +28,7 @@ jobs:
       - name: Test and then publish to PPA
         run: ./release.bash fonts-ubuntu-mono-nerd-font
         env:
-          SKIP_UPLOAD: "true"
+          SKIP_UPLOAD: "false"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
@@ -56,3 +56,5 @@ jobs:
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash fonts-ubuntu-mono-nerd-font ${{ matrix.ubuntu }}
+        env:
+          SKIP_UPLOAD: "true"
