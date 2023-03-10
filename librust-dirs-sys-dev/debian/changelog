@@ -1,3 +1,9 @@
+rust-dirs-sys (0.3.7-1~jammy1~ppa1) jammy; urgency=medium
+
+  * Build for jammy
+
+ -- Mario Finelli <ubuntu@mroml.com>  Sat, 11 Mar 2023 00:54:18 +0100
+
 rust-dirs-sys (0.3.7-1) unstable; urgency=medium
 
   * Team upload.
