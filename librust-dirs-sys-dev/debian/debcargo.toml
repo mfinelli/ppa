@@ -1,0 +1,5 @@
+overlay = "."
+uploaders = ["kpcyrd <git@rxv.cc>"]
+
+# The auto-generated summary is too long.
+summary = "Helper functions for the dirs crate"
