@@ -36,7 +36,7 @@ if [[ $1 == fonts-ubuntu-mono-nerd-font ]]; then
   # header changes and launchpad rejects the upload as using a different
   # source. resolve by downloading directly the original source from the PPA
   # https://help.launchpad.net/Packaging/UploadErrors#Apparently_successful_upload_followed_by_a_rejection_email
-  surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/2.2.2-1~focal1~ppa1/fonts-ubuntu-mono-nerd-font_2.2.2.orig.tar.gz"
+  surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/2.3.3-1~focal1~ppa1/fonts-ubuntu-mono-nerd-font_2.3.3.orig.tar.gz"
 fi
 
 # we don't have any special zip handling here because we will always need to
