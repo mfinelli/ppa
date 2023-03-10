@@ -25,6 +25,10 @@ jobs:
         run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
       - name: Install build dependencies
         run: sudo apt install -y debcargo dh-cargo
+      - uses: actions/cache@v3
+        with:
+          path: ~/pbuilder/*-base.tgz
+          key: ${{ runner.os }}-vivid
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
