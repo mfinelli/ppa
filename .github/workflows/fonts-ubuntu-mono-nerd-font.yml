@@ -28,7 +28,7 @@ jobs:
       - name: Test and then publish to PPA
         run: ./release.bash fonts-ubuntu-mono-nerd-font
         env:
-          SKIP_UPLOAD: "true"
+          SKIP_UPLOAD: "false"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
