@@ -1,0 +1,76 @@
+.TH vivid 1 "DEZ 2022" "vivid 0.8.0" "LS_COLORS manager with multiple themes"
+.SH NAME
+\fBvivid \fP- LS_COLORS manager with multiple themes
+\fB
+.SH SYNOPSIS
+.nf
+.fam C
+ \fBvivid\fP [\fIOPTION\fP]
+
+.fam T
+.fi
+.fam T
+.fi
+.SH DESCRIPTION
+Generator for the LS_COLORS (environment variable) controlling the color voice
+of ls, tree, fd, bfs, duste and many other tools. It uses a YAML configuration
+format for the file type database and core themes.
+.PP
+Unlike dircolors, the database and themes are organized in different files.
+This allows users to choose and customize color themes independently from
+the collection of file extensions. Instead of using cryptic ANSI escape
+codes, colors can be specified in RRGBBB format and will be converted to
+ANSI truecolor (24-bit) codes or 8-bit codes for older terminal emulators.
+.SH USAGE:
+\fBvivid\fP <SUBCOMMAND>
+.SH OPTIONS:
+.TP
+.B
+\fB-m\fP, \fB--color-mode\fP <mode>
+Type of ANSI colors to be used [default: 24-bit]
+[possible values: 8-bit, 24-bit]
+.TP
+.B
+\fB-d\fP, \fB--database\fP <path>
+Path to filetypes database (filetypes.yml)
+.TP
+.B
+\fB-h\fP, \fB--help\fP
+Prints help information
+.TP
+.B
+\fB-V\fP, \fB--version\fP
+Prints version information
+.SH SUBCOMMANDS:
+.TP
+.B
+generate
+Generate a LS_COLORS expression
+.TP
+.B
+preview
+Preview a given theme
+.TP
+.B
+themes
+Prints list of available themes
+.TP
+.B
+help
+Prints this message or the help of the given \fBsubcommand\fP(s)
+.SH EXAMPLES:
+Choose a color theme (for example: molokai).
+Then, add this to your shells RC file (~/.bashrc, ~/.zshrc, …):
+export LS_COLORS="$(\fBvivid\fP generate molokai)"
+.PP
+Note:
+Terminals without true color support
+By default, \fBvivid\fP runs in true color mode (24-bit). If you don't have a
+terminal that supports 24-bit colors, use the \fB--color-mode\fP 8-bit option
+when running \fBvivid\fP. This will generate interpolated 8-bit colors:
+export LS_COLORS="$(\fBvivid\fP \fB-m\fP 8-bit generate molokai)"
+.SH AUTHOR
+openfile was written by David Peter <mail@david-peter.de>
+.PP
+This manual page was written by Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>
+for the Debian project (but may be used by others).

@@ -1,18 +1,48 @@
-Source: vivid
+Source: rust-vivid
 Section: utils
 Priority: optional
-Maintainer: Mario Finelli <ubuntu@mroml.com>
-Build-Depends: debhelper-compat (= 12)
-Standards-Version: 4.4.1
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native,
+ rustc:native,
+ libstd-rust-dev,
+ librust-ansi-colours-1+default-dev,
+ librust-clap-2+color-dev,
+ librust-clap-2+default-dev,
+ librust-clap-2+suggestions-dev,
+ librust-clap-2+wrap-help-dev,
+ librust-dirs-4+default-dev,
+ librust-lazy-static-1+default-dev (>= 1.2-~~),
+ librust-rust-embed-6+default-dev (>= 6.3-~~),
+ librust-yaml-rust-0.4+default-dev,
+ debhelper (>= 13),
+ libyaml-dev
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>
+Standards-Version: 4.6.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/vivid]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/vivid
 Homepage: https://github.com/sharkdp/vivid
-#Vcs-Browser: https://salsa.debian.org/debian/vivid
-#Vcs-Git: https://salsa.debian.org/debian/vivid.git
-# Source-Archive: https://github.com/sharkdp/vivid/archive/v0.8.0.tar.gz
+X-Cargo-Crate: vivid
+Rules-Requires-Root: no
 
 Package: vivid
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: A themeable LS_COLORS generator with a rich filetype datebase
+Multi-Arch: allowed
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ ${cargo:Depends}
+Recommends:
+ ${cargo:Recommends}
+Suggests:
+ ${cargo:Suggests}
+Provides:
+ ${cargo:Provides}
+Built-Using: ${cargo:Built-Using}
+XB-X-Cargo-Built-Using: ${cargo:X-Cargo-Built-Using}
+Description: LS_COLORS manager with multiple themes
  vivid is a generator for the LS_COLORS environment variable that controls
  the colorized output of ls, tree, fd, bfs, dust and many other tools.
  .

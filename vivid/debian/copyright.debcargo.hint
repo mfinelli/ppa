@@ -4,8 +4,13 @@ Upstream-Contact: David Peter <mail@david-peter.de>
 Source: https://github.com/sharkdp/vivid
 
 Files: *
-Copyright: 2018-2022 David Peter <mail@david-peter.de>
+Copyright: FIXME (overlay) UNKNOWN-YEARS David Peter <mail@david-peter.de>
 License: MIT or Apache-2.0
+Comment:
+ FIXME (overlay): Since upstream copyright years are not available in
+ Cargo.toml, they were extracted from the upstream Git repository. This may not
+ be correct information so you should review and fix this before uploading to
+ the archive.
 
 Files: debian/*
 Copyright:

@@ -17,6 +17,10 @@ if [[ $1 == ansible ]]; then
   # use the UMD mirror -- archive.ubuntu.com is not available over https
   wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/a/ansible/ansible_2.10.7+merged+base+2.10.8+dfsg.orig.tar.xz
   cd ../ppa
+elif [[ $1 == vivid ]]; then
+  cd ../build-area
+  wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-vivid/rust-vivid_0.8.0.orig.tar.gz
+  cd ../ppa
 elif [[ $1 == debcargo ]]; then
   cd ../build-area
   wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-debcargo/rust-debcargo_2.4.4.orig.tar.gz
