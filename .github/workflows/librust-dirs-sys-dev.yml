@@ -27,16 +27,12 @@ jobs:
         run: |
           sudo apt install -y debcargo dh-cargo librust-winapi-dev \
             librust-libc-dev
-      - uses: actions/cache@v3
-        with:
-          path: ~/pbuilder/*-base.tgz
-          key: ${{ runner.os }}-librust-dirs-sys-dev
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
         run: ./release.bash librust-dirs-sys-dev
         env:
-          SKIP_UPLOAD: "false"
+          SKIP_UPLOAD: "true"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \

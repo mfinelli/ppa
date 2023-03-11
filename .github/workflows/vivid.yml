@@ -27,10 +27,6 @@ jobs:
         run: |
           sudo apt install -y debcargo dh-cargo librust-ansi-colours-dev \
             librust-clap-2-dev librust-lazy-static-dev librust-yaml-rust-dev
-      - uses: actions/cache@v3
-        with:
-          path: ~/pbuilder/*-base.tgz
-          key: ${{ runner.os }}-vivid
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
