@@ -29,10 +29,6 @@ elif [[ $1 == librust-dirs-sys-dev ]]; then
   cd ../build-area
   wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-dirs-sys/rust-dirs-sys_0.3.7.orig.tar.gz
   cd ../ppa
-elif [[ $1 == debcargo ]]; then
-  cd ../build-area
-  wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-debcargo/rust-debcargo_2.4.4.orig.tar.gz
-  cd ../ppa
 else
   cd "$1"
 
