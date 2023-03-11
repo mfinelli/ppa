@@ -21,10 +21,14 @@ jobs:
         id: ubuntu
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Add supermario PPA
+        run: sudo add-apt-repository -y ppa:mfinelli/supermario
+      - name: Run apt update before attempting to install dependencies
+        run: sudo apt update && sudo apt upgrade -y
       - name: Install global packaging dependencies
         run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
       - name: Install build dependencies
-        run: sudo apt install -y debcargo dh-cargo
+        run: sudo apt install -y debcargo dh-cargo librust-dirs-sys-dev
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
