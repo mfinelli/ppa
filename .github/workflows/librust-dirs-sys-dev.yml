@@ -24,7 +24,7 @@ jobs:
       - name: Install global packaging dependencies
         run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
       - name: Install build dependencies
-        run: sudo apt install -y debcargo dh-cargo
+        run: sudo apt install -y debcargo dh-cargo librust-winapi-dev
       - uses: actions/cache@v3
         with:
           path: ~/pbuilder/*-base.tgz
