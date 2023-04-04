@@ -1,3 +1,9 @@
+houmain-keymapper (2.5.1-1~focal1~ppa1) focal; urgency=medium
+
+  * Update to 2.5.1
+
+ -- Mario Finelli <ubuntu@mroml.com>  Tue, 4 Apr 2023 20:20:18 +0200
+
 houmain-keymapper (2.5.0-1~focal1~ppa1) focal; urgency=medium
 
   * Update to 2.5.0
