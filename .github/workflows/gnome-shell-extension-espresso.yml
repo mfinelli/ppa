@@ -22,14 +22,15 @@ jobs:
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Run apt update before attempting to install dependencies
-        run: sudo apt update && sudo apt upgrade -y
+        run: sudo apt-get update && sudo apt-get upgrade -y
       - name: Install global packaging dependencies
         run: |
-          sudo apt install -y apt-file brz-debian debhelper gnome-pkg-tools \
-            pbuilder ubuntu-dev-tools
+          sudo apt-get install -y apt-file brz-debian debhelper pbuilder \
+            ubuntu-dev-tools
       - name: Install build dependencies
         run: |
-          sudo apt install -y dh-sequence-gnome gobject-introspection
+          sudo apt-get install -y dh-sequence-gnome gnome-pkg-tools \
+            gobject-introspection
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
@@ -45,3 +46,31 @@ jobs:
           name: gnome-shell-extension-espresso
           path: |
             ~/pbuilder/${{ steps.ubuntu.outputs.codename}}_result/*.deb
+
+  port:
+    name: Port ${{ matrix.ubuntu }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ubuntu: [noble]
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    container: ubuntu:${{ matrix.ubuntu }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update and install dependencies
+        run: |
+          apt-get update -y
+          apt-get upgrade -y
+          apt-get install -y debhelper gnupg ubuntu-dev-tools
+      - name: Import signing key into local keyring
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Install build dependencies
+        run: |
+          apt-get install -y dh-sequence-gnome gnome-pkg-tools \
+            gobject-introspection
+      - name: Build the source package for the target and publish to PPA
+        run: ./port.bash gnom-shell-extension-espresso ${{ matrix.ubuntu }}
+        env:
+          SKIP_UPLOAD: "true"
