@@ -1,0 +1,5 @@
+*.js usr/share/gnome-shell/extensions/espresso@coadmunkee.github.com/
+*.json usr/share/gnome-shell/extensions/espresso@coadmunkee.github.com/
+icons usr/share/gnome-shell/extensions/espresso@coadmunkee.github.com/
+locale usr/share/gnome-shell/extensions/expresso@coadmunkee.github.com/
+schemas usr/share/gnome-shell/extensions/expresso@coadmunkee.github.com/

@@ -1,0 +1,20 @@
+Source: gnome-shell-extension-espresso
+Section: gnome
+Priority: optional
+Maintainer: Mario Finelli <ubuntu@mroml.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-gnome,
+ gobject-introspection,
+Standards-Version: 4.5.0
+Homepage: https://github.com/coadmunkee/gnome-shell-extension-espresso
+# Source-Archive: https://extensions.gnome.org/extension-data/espressocoadmunkee.github.com.v8.shell-extension.zip
+
+Package: gnome-shell-extension-espresso
+Architecture: all
+Depends:
+ gnome-shell,
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: Enable controlling conditions to prevent the usual auto suspend
+ and screensaver functions from taking effect.
