@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Detect ubuntu release codename
-        run: echo "::set-output name=codename::$(./codename.sh)"
+        run: echo "codename=$(./codename.sh)" >> $GITHUB_OUTPUT
         id: ubuntu
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
