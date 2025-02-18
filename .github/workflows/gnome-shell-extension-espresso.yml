@@ -1,0 +1,76 @@
+---
+name: gnome-shell-extension-espresso
+on:
+  push:
+    paths:
+      - gnome-shell-extension-espresso/**
+      - .github/workflows/gnome-shell-extension-espresso.yml
+
+env:
+  DEBFULLNAME: Mario Finelli
+  DEBEMAIL: ubuntu@mroml.com
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect ubuntu release codename
+        run: echo "codename=$(./codename.sh)" >> $GITHUB_OUTPUT
+        id: ubuntu
+      - name: Import signing key into local keyring
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Run apt update before attempting to install dependencies
+        run: sudo apt-get update && sudo apt-get upgrade -y
+      - name: Install global packaging dependencies
+        run: |
+          sudo apt-get install -y apt-file brz-debian debhelper pbuilder \
+            ubuntu-dev-tools
+      - name: Install build dependencies
+        run: |
+          sudo apt-get install -y dh-sequence-gnome gnome-pkg-tools \
+            gobject-introspection
+      - name: Setup pbuilder
+        run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
+      - name: Test and then publish to PPA
+        run: ./release.bash gnome-shell-extension-espresso
+        env:
+          SKIP_UPLOAD: "true"
+      - name: Inspect package contents
+        run: |
+          find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
+            -name '*.deb' -exec lesspipe {} \;
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gnome-shell-extension-espresso
+          path: |
+            ~/pbuilder/${{ steps.ubuntu.outputs.codename}}_result/*.deb
+
+  port:
+    name: Port ${{ matrix.ubuntu }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ubuntu: [noble]
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    container: ubuntu:${{ matrix.ubuntu }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update and install dependencies
+        run: |
+          apt-get update -y
+          apt-get upgrade -y
+          apt-get install -y debhelper gnupg ubuntu-dev-tools
+      - name: Import signing key into local keyring
+        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+      - name: Install build dependencies
+        run: |
+          apt-get install -y dh-sequence-gnome gnome-pkg-tools \
+            gobject-introspection
+      - name: Build the source package for the target and publish to PPA
+        run: ./port.bash gnome-shell-extension-espresso ${{ matrix.ubuntu }}
+        env:
+          SKIP_UPLOAD: "true"

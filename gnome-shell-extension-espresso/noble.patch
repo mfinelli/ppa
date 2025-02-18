@@ -1,0 +1,36 @@
+diff --git a/gnome-shell-extension-espresso/debian/changelog b/gnome-shell-extension-espresso/debian/changelog
+index 4c8ad89..3915f95 100644
+--- a/gnome-shell-extension-espresso/debian/changelog
++++ b/gnome-shell-extension-espresso/debian/changelog
+@@ -1,4 +1,4 @@
+-gnome-shell-extension-espresso (8-1~jammy1~ppa1) jammy; urgency=medium
++gnome-shell-extension-espresso (10-1~noble1~ppa1) noble; urgency=medium
+ 
+   * Initial release
+ 
+diff --git a/gnome-shell-extension-espresso/debian/control b/gnome-shell-extension-espresso/debian/control
+index 86b79ad..c290ced 100644
+--- a/gnome-shell-extension-espresso/debian/control
++++ b/gnome-shell-extension-espresso/debian/control
+@@ -9,7 +9,7 @@ Build-Depends:
+  gobject-introspection,
+ Standards-Version: 4.5.0
+ Homepage: https://github.com/coadmunkee/gnome-shell-extension-espresso
+-# Source-Archive: https://extensions.gnome.org/extension-data/espressocoadmunkee.github.com.v8.shell-extension.zip
++# Source-Archive: https://extensions.gnome.org/extension-data/espressocoadmunkee.github.com.v10.shell-extension.zip
+ 
+ Package: gnome-shell-extension-espresso
+ Architecture: all
+diff --git a/gnome-shell-extension-espresso/debian/control.in b/gnome-shell-extension-espresso/debian/control.in
+index 86b79ad..c290ced 100644
+--- a/gnome-shell-extension-espresso/debian/control.in
++++ b/gnome-shell-extension-espresso/debian/control.in
+@@ -9,7 +9,7 @@ Build-Depends:
+  gobject-introspection,
+ Standards-Version: 4.5.0
+ Homepage: https://github.com/coadmunkee/gnome-shell-extension-espresso
+-# Source-Archive: https://extensions.gnome.org/extension-data/espressocoadmunkee.github.com.v8.shell-extension.zip
++# Source-Archive: https://extensions.gnome.org/extension-data/espressocoadmunkee.github.com.v10.shell-extension.zip
+ 
+ Package: gnome-shell-extension-espresso
+ Architecture: all
