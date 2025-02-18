@@ -24,7 +24,8 @@ jobs:
       - name: Run apt update before attempting to install dependencies
         run: sudo apt update && sudo apt upgrade -y
       - name: Install global packaging dependencies
-        run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
+        run: |
+          sudo apt install -y apt-file brz debhelper pbuilder ubuntu-dev-tools
       - name: Install build dependencies
         run: |
           sudo apt install -y dh-sequence-gnome gobject-introspection
