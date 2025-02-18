@@ -71,6 +71,6 @@ jobs:
           apt-get install -y dh-sequence-gnome gnome-pkg-tools \
             gobject-introspection
       - name: Build the source package for the target and publish to PPA
-        run: ./port.bash gnom-shell-extension-espresso ${{ matrix.ubuntu }}
+        run: ./port.bash gnome-shell-extension-espresso ${{ matrix.ubuntu }}
         env:
           SKIP_UPLOAD: "true"
