@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - gnome-shell-extension-espresso/**
-      - .github/workflows/gnome-shell-estension-espresso.yml
+      - .github/workflows/gnome-shell-extension-espresso.yml
 
 env:
   DEBFULLNAME: Mario Finelli
