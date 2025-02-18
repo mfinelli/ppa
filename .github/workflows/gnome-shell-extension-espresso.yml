@@ -36,7 +36,7 @@ jobs:
       - name: Test and then publish to PPA
         run: ./release.bash gnome-shell-extension-espresso
         env:
-          SKIP_UPLOAD: "false"
+          SKIP_UPLOAD: "true"
       - name: Inspect package contents
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
@@ -73,4 +73,4 @@ jobs:
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash gnome-shell-extension-espresso ${{ matrix.ubuntu }}
         env:
-          SKIP_UPLOAD: "true"
+          SKIP_UPLOAD: "false"
