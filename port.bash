@@ -39,10 +39,18 @@ if [[ $1 == fonts-ubuntu-mono-nerd-font ]]; then
   surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/2.3.3-1~focal1~ppa1/fonts-ubuntu-mono-nerd-font_2.3.3.orig.tar.gz"
 fi
 
-# we don't have any special zip handling here because we will always need to
-# download the "offical" archive from the PPA before porting to new
-# distributions
-curl -fsSL -o "$fname.orig.tar.gz" "$surl"
+if [[ $1 == gnome-shell-extension-espresso ]]; then
+  # we do the zip handling here because we have different versions between
+  # jammy and noble
+  curl -fsSL -o tmp.zip "$surl"
+  ./zip2tar.bash tmp.zip "$fname.orig.tar.gz"
+  rm tmp.zip
+else
+  # we don't have any special zip handling here because we will always need to
+  # download the "offical" archive from the PPA before porting to new
+  # distributions
+  curl -fsSL -o "$fname.orig.tar.gz" "$surl"
+fi
 
 # do the build
 cd "$1"
