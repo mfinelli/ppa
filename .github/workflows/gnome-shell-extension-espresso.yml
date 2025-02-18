@@ -25,8 +25,8 @@ jobs:
         run: sudo apt update && sudo apt upgrade -y
       - name: Install global packaging dependencies
         run: |
-          sudo apt install -y apt-file brz-debian debhelper pbuilder \
-            ubuntu-dev-tools
+          sudo apt install -y apt-file brz-debian debhelper gnome-pkg-tools \
+            pbuilder ubuntu-dev-tools
       - name: Install build dependencies
         run: |
           sudo apt install -y dh-sequence-gnome gobject-introspection

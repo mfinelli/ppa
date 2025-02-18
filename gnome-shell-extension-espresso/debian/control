@@ -5,6 +5,7 @@ Maintainer: Mario Finelli <ubuntu@mroml.com>
 Build-Depends:
  debhelper-compat (= 13),
  dh-sequence-gnome,
+ gnome-pkg-tools,
  gobject-introspection,
 Standards-Version: 4.5.0
 Homepage: https://github.com/coadmunkee/gnome-shell-extension-espresso
