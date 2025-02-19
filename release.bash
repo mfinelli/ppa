@@ -29,6 +29,16 @@ elif [[ $1 == librust-dirs-sys-dev ]]; then
   cd ../build-area
   wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-dirs-sys/rust-dirs-sys_0.3.7.orig.tar.gz
   cd ../ppa
+elif [[ $1 == gnome-shell-extension-espresso ]]; then
+  cd ../build-area
+
+  if [[ $codename == jammy ]]; then
+    wget https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/gnome-shell-extension-espresso/8-1~jammy1~ppa1/gnome-shell-extension-espresso_8.orig.tar.gz
+  elif [[ $codename == noble ]]; then
+    wget https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/gnome-shell-extension-espresso/10-1~noble1~ppa1/gnome-shell-extension-espresso_10.orig.tar.gz
+  fi
+
+  cd ../ppa
 else
   cd "$1"
 
