@@ -1,0 +1,10 @@
+diff --git a/fonts-ubuntu-mono-nerd-font/debian/changelog b/fonts-ubuntu-mono-nerd-font/debian/changelog
+index 728778b..23cbce9 100644
+--- a/fonts-ubuntu-mono-nerd-font/debian/changelog
++++ b/fonts-ubuntu-mono-nerd-font/debian/changelog
+@@ -1,4 +1,4 @@
+-fonts-ubuntu-mono-nerd-font (3.3.0-1~jammy1~ppa1) jammy; urgency=medium
++fonts-ubuntu-mono-nerd-font (3.3.0-1~noble1~ppa1) noble; urgency=medium
+ 
+   * Update to 3.3.0
+ 

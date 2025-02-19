@@ -5,8 +5,6 @@ on:
     paths:
       - gnome-shell-extension-espresso/**
       - .github/workflows/gnome-shell-extension-espresso.yml
-      - port.bash
-      - release.bash
 
 env:
   DEBFULLNAME: Mario Finelli
