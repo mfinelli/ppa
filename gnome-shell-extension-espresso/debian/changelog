@@ -1,3 +1,9 @@
+gnome-shell-extension-espresso (8-1~jammy1~ppa2) jammy; urgency=medium
+
+  * Fix schema and locale location
+
+ -- Mario Finelli <ubuntu@mroml.com>  Wed, 19 Feb 2025 09:51:35 +0100
+
 gnome-shell-extension-espresso (8-1~jammy1~ppa1) jammy; urgency=medium
 
   * Initial release

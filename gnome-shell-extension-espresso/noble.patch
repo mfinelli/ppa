@@ -1,8 +1,15 @@
 diff --git a/gnome-shell-extension-espresso/debian/changelog b/gnome-shell-extension-espresso/debian/changelog
-index 4c8ad89..3915f95 100644
+index ffc3616..2aa5972 100644
 --- a/gnome-shell-extension-espresso/debian/changelog
 +++ b/gnome-shell-extension-espresso/debian/changelog
-@@ -1,4 +1,4 @@
+@@ -1,10 +1,10 @@
+-gnome-shell-extension-espresso (8-1~jammy1~ppa2) jammy; urgency=medium
++gnome-shell-extension-espresso (10-1~noble1~ppa2) noble; urgency=medium
+ 
+   * Fix schema and locale location
+ 
+  -- Mario Finelli <ubuntu@mroml.com>  Wed, 19 Feb 2025 09:51:35 +0100
+ 
 -gnome-shell-extension-espresso (8-1~jammy1~ppa1) jammy; urgency=medium
 +gnome-shell-extension-espresso (10-1~noble1~ppa1) noble; urgency=medium
  

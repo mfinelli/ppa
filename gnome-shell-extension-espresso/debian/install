@@ -1,5 +1,7 @@
 *.js usr/share/gnome-shell/extensions/espresso@coadmunkee.github.com/
 *.json usr/share/gnome-shell/extensions/espresso@coadmunkee.github.com/
 icons usr/share/gnome-shell/extensions/espresso@coadmunkee.github.com/
-locale usr/share/gnome-shell/extensions/expresso@coadmunkee.github.com/
-schemas usr/share/gnome-shell/extensions/expresso@coadmunkee.github.com/
+schemas/*.xml usr/share/glib-2.0/schemas
+
+# installed by debian/rules
+usr/share/locale/*/LC_MESSAGES/*.mo
