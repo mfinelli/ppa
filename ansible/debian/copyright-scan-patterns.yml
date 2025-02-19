@@ -1,6 +1,0 @@
----
-check:
-  suffixes:
-  - ps1
-  pattern:
-  - /bin/*

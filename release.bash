@@ -12,24 +12,7 @@ mkdir -p ../build-area
 # for "backport" sources we have special handling, we need to download the
 # original sources from ubuntu and place them in the correct place.
 # we have very few backport sources, so we just hardcode them here
-if [[ $1 == ansible ]]; then
-  cd ../build-area
-  # use the UMD mirror -- archive.ubuntu.com is not available over https
-  wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/a/ansible/ansible_2.10.7+merged+base+2.10.8+dfsg.orig.tar.xz
-  cd ../ppa
-elif [[ $1 == vivid ]]; then
-  cd ../build-area
-  wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-vivid/rust-vivid_0.8.0.orig.tar.gz
-  cd ../ppa
-elif [[ $1 == librust-dirs-dev ]]; then
-  cd ../build-area
-  wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-dirs/rust-dirs_4.0.0.orig.tar.gz
-  cd ../ppa
-elif [[ $1 == librust-dirs-sys-dev ]]; then
-  cd ../build-area
-  wget https://mirror.umd.edu/ubuntu/ubuntu/pool/universe/r/rust-dirs-sys/rust-dirs-sys_0.3.7.orig.tar.gz
-  cd ../ppa
-elif [[ $1 == gnome-shell-extension-espresso ]]; then
+if [[ $1 == gnome-shell-extension-espresso ]]; then
   cd ../build-area
 
   if [[ $codename == jammy ]]; then

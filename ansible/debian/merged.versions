@@ -1,6 +1,0 @@
-# Because ansible-base and ansible source packages are merged in bullseye, we
-# need to track their versions independently (as d/changelog can only track
-# one)
-# +dfsg is taken care of in get-orig-source
-ansible-base: 2.10.8
-ansible: 2.10.7

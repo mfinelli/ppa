@@ -1,6 +1,0 @@
-rust-vivid (0.8.0-1) unstable; urgency=medium
-
-  * Initial release. (Closes: #981375)
-  * Package vivid 0.8.0 from crates.io using debcargo 2.6.0
-
- -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Wed, 21 Dec 2022 09:49:35 +0100

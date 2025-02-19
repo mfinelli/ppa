@@ -1,3 +1,0 @@
-version=4
-opts=dversionmangle=s/\+dfsg//,repacksuffix=+dfsg \
-https://pypi.debian.net/ansible/ ansible-(2\.10\.[0-9]+).tar.gz
