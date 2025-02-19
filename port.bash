@@ -40,11 +40,9 @@ if [[ $1 == fonts-ubuntu-mono-nerd-font ]]; then
 fi
 
 if [[ $1 == gnome-shell-extension-espresso ]]; then
-  codename="$(./codename.bash)"
-
-  if [[ $codename == jammy ]]; then
+  if [[ $2 == jammy ]]; then
     surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/gnome-shell-extension-espresso/8-1~jammy1~ppa1/gnome-shell-extension-espresso_8.orig.tar.gz"
-  elif [[ $codename == noble ]]; then
+  elif [[ $2 == noble ]]; then
     surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/gnome-shell-extension-espresso/10-1~noble1~ppa1/gnome-shell-extension-espresso_10.orig.tar.gz"
   fi
 
@@ -68,8 +66,8 @@ cd "$1"
 debuild -S
 cd ../
 
-ls *_source.changes
+ls ./*_source.changes
 [[ $SKIP_UPLOAD == true ]] && exit 0
-dput ppa:mfinelli/supermario *_source.changes
+dput ppa:mfinelli/supermario ./*_source.changes
 
 exit 0
