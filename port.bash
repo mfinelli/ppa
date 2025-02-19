@@ -36,7 +36,7 @@ if [[ $1 == fonts-ubuntu-mono-nerd-font ]]; then
   # header changes and launchpad rejects the upload as using a different
   # source. resolve by downloading directly the original source from the PPA
   # https://help.launchpad.net/Packaging/UploadErrors#Apparently_successful_upload_followed_by_a_rejection_email
-  surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/2.3.3-1~focal1~ppa1/fonts-ubuntu-mono-nerd-font_2.3.3.orig.tar.gz"
+  surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/3.3.0-1~jammy1~ppa1/fonts-ubuntu-mono-nerd-font_3.3.0.orig.tar.gz"
 fi
 
 if [[ $1 == gnome-shell-extension-espresso ]]; then
