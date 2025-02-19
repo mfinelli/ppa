@@ -4,7 +4,7 @@
 	dh $@
 
 override_dh_install:
-	set -e; for x in espresso@coadmunkee.github.com/locale/*; do \
+	set -e; for x in locale/*; do \
 		install -d debian/tmp/usr/share/locale/$$(basename $$x)/LC_MESSAGES; \
 		install -m644 $$x/LC_MESSAGES/*.mo debian/tmp/usr/share/locale/$$(basename $$x)/LC_MESSAGES; \
 	done
