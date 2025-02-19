@@ -65,4 +65,4 @@ jobs:
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash fonts-ubuntu-mono-nerd-font ${{ matrix.ubuntu }}
         env:
-          SKIP_UPLOAD: "false"
+          SKIP_UPLOAD: "true"
