@@ -3,7 +3,7 @@ name: houmain-keymapper
 on:
   push:
     paths:
-      - 'houmain-keymapper/**'
+      - houmain-keymapper/**
       - .github/workflows/houmain-keymapper.yml
 
 env:
@@ -13,22 +13,26 @@ env:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Detect ubuntu release codename
-        run: echo "::set-output name=codename::$(./codename.sh)"
+        run: echo "codename=$(./codename.sh)" >> $GITHUB_OUTPUT
         id: ubuntu
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Run apt update before attempting to install dependencies
-        run: sudo apt update && sudo apt upgrade -y
+        run: sudo apt-get update && sudo apt-get upgrade -y
       - name: Install global packaging dependencies
-        run: sudo apt install -y apt-file debhelper pbuilder ubuntu-dev-tools
+        run: |
+          sudo apt-get install -y apt-file brz-debian debhelper pbuilder \
+            ubuntu-dev-tools
       - name: Install build dependencies
         run: |
-          sudo apt install -y cmake git pkg-config libudev-dev \
-            libusb-1.0-0-dev libx11-dev libdbus-1-dev libwayland-dev
+          sudo apt-get install -y cmake git pkg-config \
+            libayatana-appindicator3-dev libdbus-1-dev libgtk-3-dev \
+            libudev-dev libusb-1.0-0-dev libwayland-dev libx11-dev \
+            libxkbcommon-dev
       - name: Setup pbuilder
         run: pbuilder-dist ${{ steps.ubuntu.outputs.codename }} create
       - name: Test and then publish to PPA
@@ -39,7 +43,7 @@ jobs:
         run: |
           find ~/pbuilder -not \( -path ~/pbuilder/aptcache -prune \) \
             -name '*.deb' -exec lesspipe {} \;
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: houmain-keymapper
           path: |
@@ -51,25 +55,26 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ubuntu: [jammy]
+        ubuntu: [noble]
     env:
       DEBIAN_FRONTEND: noninteractive
     container: ubuntu:${{ matrix.ubuntu }}
-    needs: [release]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Update and install dependencies
         run: |
-          apt update -y
-          apt upgrade -y
-          apt install -y debhelper gnupg ubuntu-dev-tools
+          apt-get update -y
+          apt-get upgrade -y
+          apt-get install -y debhelper gnupg ubuntu-dev-tools
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Install build dependencies
         run: |
-          apt install -y cmake git pkg-config libudev-dev \
-            libusb-1.0-0-dev libx11-dev libdbus-1-dev libwayland-dev
+          apt-get install -y cmake git pkg-config \
+            libayatana-appindicator3-dev libdbus-1-dev libgtk-3-dev \
+            libudev-dev libusb-1.0-0-dev libwayland-dev libx11-dev \
+            libxkbcommon-dev
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash houmain-keymapper ${{ matrix.ubuntu }}
         env:
-          SKIP_UPLOAD: "false"
+          SKIP_UPLOAD: "true"
