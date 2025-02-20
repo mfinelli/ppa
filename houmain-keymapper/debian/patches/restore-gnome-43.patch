@@ -1,0 +1,90 @@
+diff --git a/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/extension.js b/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/extension.js
+index 85577c5..177477b 100644
+--- a/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/extension.js
++++ b/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/extension.js
+@@ -1,40 +1,35 @@
+-import Shell from 'gi://Shell';
+-import Gio from 'gi://Gio';
++const Shell = imports.gi.Shell;
++const Gio = imports.gi.Gio;
+ 
+-export default class KeymapperExtension {
+-  constructor() {
+-    const KeymapperInterface = '<node>\
+-    <interface name="com.github.houmain.Keymapper"> \
+-      <method name="WindowFocus"> \
+-        <arg name="title" type="s" direction="in"/> \
+-        <arg name="class" type="s" direction="in"/> \
+-      </method> \
+-    </interface> \
+-    </node>';
++const KeymapperInterface = '<node>\
++<interface name="com.github.houmain.Keymapper"> \
++  <method name="WindowFocus"> \
++    <arg name="title" type="s" direction="in"/> \
++    <arg name="class" type="s" direction="in"/> \
++  </method> \
++</interface> \
++</node>';
+ 
+-    const KeymapperProxy = Gio.DBusProxy.makeProxyWrapper(KeymapperInterface);
++const KeymapperProxy = Gio.DBusProxy.makeProxyWrapper(KeymapperInterface);
+ 
+-    this._keymapper = new KeymapperProxy(
+-      Gio.DBus.session,
+-      "com.github.houmain.Keymapper",
+-      "/com/github/houmain/Keymapper"
+-    );
++const keymapper = new KeymapperProxy(
++  Gio.DBus.session,
++  "com.github.houmain.Keymapper",
++  "/com/github/houmain/Keymapper"
++);
+ 
+-    Shell.WindowTracker.get_default().connect('notify::focus-app', () => {
+-      const window = global.display.focus_window;
+-      if (this._enabled)
+-        this._keymapper.WindowFocusSync(
+-          (window ? window.get_title() : ''),
+-          (window ? window.get_wm_class() : "root"));
+-    });
+-  }
++let enabled = false;
+ 
+-  enable() {
+-    this._enabled = true;
+-  }
+-
+-  disable() {
+-    this._enabled = false;
+-  }
++function init() {
++  Shell.WindowTracker.get_default().connect('notify::focus-app', () => {
++    const window = global.display.focus_window;
++    if (enabled)
++      keymapper.WindowFocusSync(
++        (window ? window.get_title() : ''),
++        (window ? window.get_wm_class() : "root"));
++  });
++  return {
++    enable: ()=>{ enabled = true; },
++    disable: ()=>{ enabled = false; }
++  };
+ }
+-
+diff --git a/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/metadata.json b/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/metadata.json
+index 51c7d66..6eedf8a 100644
+--- a/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/metadata.json
++++ b/extra/share/gnome-shell/extensions/keymapper@houmain.github.com/metadata.json
+@@ -3,9 +3,8 @@
+   "name": "Keymapper",
+   "description": "Informs keymapper about the currently focused window.",
+   "url": "https://github.com/houmain/keymapper",
+-  "version": 2,
++  "version": 1,
+   "shell-version": [
+-    "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55"
++    "40", "41", "42", "43", "44"
+   ]
+ }
+-

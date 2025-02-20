@@ -1,4 +1,10 @@
-houmain-keymapper (2.5.1-1~focal1~ppa1) focal; urgency=medium
+houmain-keymapper (4.10.2-1~jammy1~ppa1) jammy; urgency=medium
+
+  * Update to 4.10.2
+
+ -- Mario Finelli <ubuntu@mroml.com>  Thu, 20 Feb 2025 11:26:20 +0100
+
+houmain-keymapper (2.5.1-1~jammy1~ppa1) jammy; urgency=medium
 
   * Update to 2.5.1
 
