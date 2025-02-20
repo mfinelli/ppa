@@ -77,4 +77,4 @@ jobs:
       - name: Build the source package for the target and publish to PPA
         run: ./port.bash houmain-keymapper ${{ matrix.ubuntu }}
         env:
-          SKIP_UPLOAD: "false"
+          SKIP_UPLOAD: "true"
