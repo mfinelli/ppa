@@ -1,12 +1,12 @@
 diff --git a/houmain-keymapper/debian/changelog b/houmain-keymapper/debian/changelog
-index 0c72d4e..9877f4f 100644
+index b79f711..f7e0103 100644
 --- a/houmain-keymapper/debian/changelog
 +++ b/houmain-keymapper/debian/changelog
 @@ -1,4 +1,4 @@
--houmain-keymapper (4.10.2-1~jammy1~ppa1) jammy; urgency=medium
-+houmain-keymapper (4.10.2-1~noble1~ppa1) noble; urgency=medium
+-houmain-keymapper (4.11.0-1~jammy1~ppa1) jammy; urgency=medium
++houmain-keymapper (4.11.0-1~noble1~ppa1) noble; urgency=medium
  
-   * Update to 4.10.2
+   * Update to 4.11.0
  
 diff --git a/houmain-keymapper/debian/patches/restore-gnome-43.patch b/houmain-keymapper/debian/patches/restore-gnome-43.patch
 deleted file mode 100644
