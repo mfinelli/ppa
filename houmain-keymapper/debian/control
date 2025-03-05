@@ -14,7 +14,9 @@ Build-Depends:
  libusb-1.0-0-dev,
  libwayland-dev,
  libx11-dev,
+ libx11-xcb-dev,
  libxkbcommon-dev,
+ libxkbcommon-x11-dev,
 Standards-Version: 4.5.0
 Homepage: https://github.com/houmain/keymapper
 # Source-Archive: https://github.com/houmain/keymapper/archive/refs/tags/4.11.0.tar.gz
@@ -29,6 +31,8 @@ Depends:
  libusb-1.0-0,
  libwayland-client0,
  libx11-6,
+ libx11-xcb1,
+ libxkbcommon-x11-0,
  libxkbcommon0,
  ${shlibs:Depends},
  ${misc:Depends},
