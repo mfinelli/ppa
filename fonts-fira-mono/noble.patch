@@ -1,0 +1,10 @@
+diff --git a/fonts-fira-mono/debian/changelog b/fonts-fira-mono/debian/changelog
+index 8f999fc..997a697 100644
+--- a/fonts-fira-mono/debian/changelog
++++ b/fonts-fira-mono/debian/changelog
+@@ -1,4 +1,4 @@
+-fonts-fira-mono (4.202-1~jammy1~ppa1) jammy; urgency=medium
++fonts-fira-mono (4.202-1~noble1~ppa1) noble; urgency=medium
+ 
+   * Initial release
+ 
