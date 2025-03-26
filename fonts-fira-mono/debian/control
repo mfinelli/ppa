@@ -1,0 +1,14 @@
+Source: fonts-fira-mono
+Section: fonts
+Priority: optional
+Maintainer: Mario Finelli <ubuntu@mroml.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.0
+Homepage: https://github.com/mozilla/Fira
+Rules-Requires-Root: no
+# Source-Archive: https://github.com/mozilla/Fira/archive/refs/tags/4.202.tar.gz
+
+Package: fonts-fira-mono
+Architecture: all
+Depends: ${misc:Depends}
+Description: Mozilla's new typeface, used in Firefox OS
