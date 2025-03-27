@@ -63,6 +63,6 @@ jobs:
       - name: Import signing key into local keyring
         run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
       - name: Build the source package for the target and publish to PPA
-        run: ./port.bash fonts-ubuntu-mono-nerd-font ${{ matrix.ubuntu }}
+        run: ./port.bash fonts-fira-mono ${{ matrix.ubuntu }}
         env:
           SKIP_UPLOAD: "false"
