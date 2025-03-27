@@ -1,0 +1,10 @@
+diff --git a/fonts-iosevka/debian/changelog b/fonts-iosevka/debian/changelog
+index fa92c2c..b520bcd 100644
+--- a/fonts-iosevka/debian/changelog
++++ b/fonts-iosevka/debian/changelog
+@@ -1,4 +1,4 @@
+-fonts-iosevka (33.1.0-1~jammy1~ppa1) jammy; urgency=medium
++fonts-iosevka (33.1.0-1~noble1~ppa1) noble; urgency=medium
+ 
+   * Initial release
+ 
