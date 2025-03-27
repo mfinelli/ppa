@@ -1,0 +1,17 @@
+Source: fonts-iosevka
+Section: fonts
+Priority: optional
+Maintainer: Mario Finelli <ubuntu@mroml.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.0
+Homepage: https://github.com/be5invis/Iosevka
+Rules-Requires-Root: no
+# Source-Archive: https://github.com/be5invis/Iosevka/releases/download/v33.1.0/PkgTTF-Iosevka-33.1.0.zip
+
+Package: fonts-iosevka
+Architecture: all
+Depends: ${misc:Depends}
+Description: Versatile typeface for code, from code
+ Iosevka [ˌjɔˈseβ.kʰa] is an open-source, sans-serif + slab-serif, monospace +
+ quasi‑proportional typeface family, designed for writing code, using in
+ terminals, and preparing technical documents.
