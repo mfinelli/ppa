@@ -6,7 +6,7 @@ Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.5.0
 Homepage: https://github.com/be5invis/Iosevka
 Rules-Requires-Root: no
-# Source-Archive: https://github.com/be5invis/Iosevka/releases/download/v33.1.0/PkgTTF-Iosevka-33.1.0.zip
+# Source-Archive: https://github.com/be5invis/Iosevka/releases/download/v33.2.7/PkgTTF-Iosevka-33.2.7.zip
 
 Package: fonts-iosevka
 Architecture: all
