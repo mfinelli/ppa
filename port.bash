@@ -38,7 +38,7 @@ if [[ $1 == fonts-ubuntu-mono-nerd-font ]]; then
   # https://help.launchpad.net/Packaging/UploadErrors#Apparently_successful_upload_followed_by_a_rejection_email
   surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-ubuntu-mono-nerd-font/3.3.0-1~jammy1~ppa1/fonts-ubuntu-mono-nerd-font_3.3.0.orig.tar.gz"
 elif [[ $1 == fonts-iosevka ]]; then
-  surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-iosevka/33.1.0-1~jammy1~ppa1/fonts-iosevka_33.1.0.orig.tar.gz"
+  surl="https://launchpad.net/~mfinelli/+archive/ubuntu/supermario/+sourcefiles/fonts-iosevka/33.2.7-1~jammy1~ppa1/fonts-iosevka_33.2.7.orig.tar.gz"
 fi
 
 if [[ $1 == gnome-shell-extension-espresso ]]; then
