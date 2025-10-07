@@ -1,3 +1,9 @@
+houmain-keymapper (5.0.0-1~noble1~ppa1) noble; urgency=medium
+
+  * Update to 5.0.0
+
+ -- Mario Finelli <ubuntu@mroml.com>  Tue, 7 Oct 2025 14:48:10 +0200
+
 houmain-keymapper (4.11.0-1~jammy1~ppa1) jammy; urgency=medium
 
   * Update to 4.11.0

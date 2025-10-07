@@ -19,7 +19,7 @@ Build-Depends:
  libxkbcommon-x11-dev,
 Standards-Version: 4.5.0
 Homepage: https://github.com/houmain/keymapper
-# Source-Archive: https://github.com/houmain/keymapper/archive/refs/tags/4.11.0.tar.gz
+# Source-Archive: https://github.com/houmain/keymapper/archive/refs/tags/5.0.0.tar.gz
 
 Package: houmain-keymapper
 Architecture: any
