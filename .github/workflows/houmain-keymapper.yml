@@ -13,9 +13,9 @@ env:
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Detect ubuntu release codename
         run: echo "codename=$(./codename.sh)" >> $GITHUB_OUTPUT
         id: ubuntu
@@ -29,7 +29,7 @@ jobs:
             ubuntu-dev-tools
       - name: Install build dependencies
         run: |
-          sudo apt-get install -y cmake git pkg-config \
+          sudo apt-get install -y build-essential cmake git pkg-config \
             libayatana-appindicator3-dev libdbus-1-dev libgtk-3-dev \
             libudev-dev libusb-1.0-0-dev libwayland-dev libx11-dev \
             libx11-xcb-dev libxkbcommon-dev libxkbcommon-x11-dev
@@ -49,32 +49,32 @@ jobs:
           path: |
             ~/pbuilder/${{ steps.ubuntu.outputs.codename}}_result/*.deb
 
-  port:
-    name: Port ${{ matrix.ubuntu }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        ubuntu: [noble]
-    env:
-      DEBIAN_FRONTEND: noninteractive
-    container: ubuntu:${{ matrix.ubuntu }}
-    steps:
-      - uses: actions/checkout@v4
-      - name: Update and install dependencies
-        run: |
-          apt-get update -y
-          apt-get upgrade -y
-          apt-get install -y debhelper gnupg ubuntu-dev-tools
-      - name: Import signing key into local keyring
-        run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
-      - name: Install build dependencies
-        run: |
-          apt-get install -y cmake git pkg-config \
-            libayatana-appindicator3-dev libdbus-1-dev libgtk-3-dev \
-            libudev-dev libusb-1.0-0-dev libwayland-dev libx11-dev \
-            libx11-xcb-dev libxkbcommon-dev libxkbcommon-x11-dev
-      - name: Build the source package for the target and publish to PPA
-        run: ./port.bash houmain-keymapper ${{ matrix.ubuntu }}
-        env:
-          SKIP_UPLOAD: "false"
+  # port:
+  #   name: Port ${{ matrix.ubuntu }}
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     fail-fast: false
+  #     matrix:
+  #       ubuntu: [noble]
+  #   env:
+  #     DEBIAN_FRONTEND: noninteractive
+  #   container: ubuntu:${{ matrix.ubuntu }}
+  #   steps:
+  #     - uses: actions/checkout@v5
+  #     - name: Update and install dependencies
+  #       run: |
+  #         apt-get update -y
+  #         apt-get upgrade -y
+  #         apt-get install -y debhelper gnupg ubuntu-dev-tools
+  #     - name: Import signing key into local keyring
+  #       run: echo -n "${{ secrets.SIGNING_KEY }}" | base64 -d | gpg --import
+  #     - name: Install build dependencies
+  #       run: |
+  #         apt-get install -y cmake git pkg-config \
+  #           libayatana-appindicator3-dev libdbus-1-dev libgtk-3-dev \
+  #           libudev-dev libusb-1.0-0-dev libwayland-dev libx11-dev \
+  #           libx11-xcb-dev libxkbcommon-dev libxkbcommon-x11-dev
+  #     - name: Build the source package for the target and publish to PPA
+  #       run: ./port.bash houmain-keymapper ${{ matrix.ubuntu }}
+  #       env:
+  #         SKIP_UPLOAD: "true"
